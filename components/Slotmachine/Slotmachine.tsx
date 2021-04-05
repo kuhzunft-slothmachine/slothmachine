@@ -7,9 +7,10 @@ import { CurrentSlots } from "../../hooks/useArtists";
 
 interface SlotmachineProps {
   currentSlots: CurrentSlots;
+  isAutoplaying: boolean;
 }
 
-const Slotmachine = ({ currentSlots }: SlotmachineProps) => {
+const Slotmachine = ({ currentSlots, isAutoplaying }: SlotmachineProps) => {
   return (
     <div className={classes.block}>
       <div className={classes.slots}>
@@ -31,8 +32,16 @@ const Slotmachine = ({ currentSlots }: SlotmachineProps) => {
       </div>
 
       <div className={classes.tracks}>
-        {currentSlots.map(({ track }, idx) => {
-          return <TrackComponent key={idx} title={track.title} />;
+        {currentSlots.map(({ track, muted, toggleMutedState }, idx) => {
+          return (
+            <TrackComponent
+              key={idx}
+              title={track.title}
+              muted={muted}
+              onClick={toggleMutedState}
+              isAutoplaying={isAutoplaying}
+            />
+          );
         })}
       </div>
 

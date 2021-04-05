@@ -14,7 +14,17 @@ import useArtists from "../hooks/useArtists";
 import classes from "./index.module.scss";
 
 export default function Home({ allArtists, allTracks }) {
-  const { currentSlots } = useArtists({ allTracks, allArtists });
+  const {
+    currentSlots,
+    start,
+    stop,
+    isPlaying,
+    isAutoplaying,
+    toggleAutoplaying,
+  } = useArtists({
+    allTracks,
+    allArtists,
+  });
 
   return (
     <div className={classes.block}>
@@ -29,13 +39,16 @@ export default function Home({ allArtists, allTracks }) {
             </a>
           </div>
           <div className={classes.slotmachineContainer}>
-            <Slotmachine currentSlots={currentSlots} />
+            <Slotmachine
+              currentSlots={currentSlots}
+              isAutoplaying={isAutoplaying}
+            />
           </div>
           <div className={classes.sidebar}>
             <img src="/media/images/arrow-right.png" alt="...Now" />
             <AutoplayButton
-              state={false}
-              onToggle={() => {}}
+              state={isAutoplaying}
+              onToggle={toggleAutoplaying}
             />
           </div>
         </div>
@@ -43,15 +56,7 @@ export default function Home({ allArtists, allTracks }) {
           <Link href="/about">
             <a className={classes.footerLink}>ABOUT</a>
           </Link>
-          <StartButton
-            running={false}
-            onStart={() => {
-              console.log("Starting");
-            }}
-            onStop={() => {
-              console.log("Stopping");
-            }}
-          />
+          <StartButton running={isPlaying} onStart={start} onStop={stop} />
         </div>
       </Main>
     </div>

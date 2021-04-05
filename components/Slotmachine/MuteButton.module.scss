@@ -6,3 +6,8 @@
 .muted {
   opacity: 0.2;
 }
+
+.isAutoplaying {
+  opacity: 0;
+  pointer-events: none;
+}

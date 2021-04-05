@@ -12,7 +12,8 @@
     "next": "10.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "use-sound": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.37",
