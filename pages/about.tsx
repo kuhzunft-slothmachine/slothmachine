@@ -6,16 +6,16 @@ import About from "../components/About";
 
 export default function Home() {
   return (
-    <>
+    <div className="container">
       <Head>
         <title>About Slotmachine</title>
       </Head>
-      <div className="container">
-        <Header />
-        <Main>
-          <About />
-        </Main>
-      </div>
-    </>
+
+      <Header />
+
+      <Main>
+        <About />
+      </Main>
+    </div>
   );
 }
