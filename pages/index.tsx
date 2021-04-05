@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { promises as fs } from "fs";
+import path from "path";
+
 import Link from "next/link";
 
 import Header from "../components/Header";
@@ -7,10 +9,12 @@ import Slotmachine from "../components/Slotmachine";
 import StartButton from "../components/StartButton";
 import AutoplayButton from "../components/AutoplayButton";
 
+import useArtists from "../hooks/useArtists";
+
 import classes from "./index.module.scss";
 
-export default function Home() {
-  const [autoplay, setAutoplay] = useState(false);
+export default function Home({ allArtists, allTracks }) {
+  const { currentSlots } = useArtists({ allTracks, allArtists });
 
   return (
     <div className={classes.block}>
@@ -25,15 +29,13 @@ export default function Home() {
             </a>
           </div>
           <div className={classes.slotmachineContainer}>
-            <Slotmachine />
+            <Slotmachine currentSlots={currentSlots} />
           </div>
           <div className={classes.sidebar}>
             <img src="/media/images/arrow-right.png" alt="...Now" />
             <AutoplayButton
-              state={autoplay}
-              onToggle={(nextAutoplayState) => {
-                setAutoplay(nextAutoplayState);
-              }}
+              state={false}
+              onToggle={() => {}}
             />
           </div>
         </div>
@@ -54,4 +56,24 @@ export default function Home() {
       </Main>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const allArtists = await fs.readFile(
+    path.join(process.cwd(), "data/artists.json"),
+    "utf8"
+  );
+  const allTracks = await fs.readFile(
+    path.join(process.cwd(), "data/tracks.json"),
+    "utf8"
+  );
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      allArtists: JSON.parse(allArtists),
+      allTracks: JSON.parse(allTracks),
+    },
+  };
 }

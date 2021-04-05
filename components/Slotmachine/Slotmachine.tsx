@@ -1,16 +1,29 @@
 import ArtistLabel from "./ArtistLabel";
-import Track from "./Track";
+import TrackComponent from "./Track";
 
 import classes from "./Slotmachine.module.scss";
 
-const Slotmachine = () => {
+import { CurrentSlots } from "../../hooks/useArtists";
+
+interface SlotmachineProps {
+  currentSlots: CurrentSlots;
+}
+
+const Slotmachine = ({ currentSlots }: SlotmachineProps) => {
   return (
     <div className={classes.block}>
       <div className={classes.slots}>
         <div className={classes.photos}>
-          <div className={classes.photo} />
-          <div className={classes.photo} />
-          <div className={classes.photo} />
+          {currentSlots.map(({ track, artist }, idx) => {
+            return (
+              <div key={idx} className={classes.photo}>
+                <img
+                  src={`/media/${track.photo}`}
+                  alt={`Picture of the ${artist.name}`}
+                />
+              </div>
+            );
+          })}
         </div>
         <div className={classes.frame}>
           <img src="/media/images/photo-frame.png" alt="Slotmachine Frame" />
@@ -18,15 +31,23 @@ const Slotmachine = () => {
       </div>
 
       <div className={classes.tracks}>
-        <Track />
-        <Track />
-        <Track />
+        {currentSlots.map(({ track }, idx) => {
+          return <TrackComponent key={idx} title={track.title} />;
+        })}
       </div>
 
       <div className={classes.artists}>
-        <ArtistLabel artist="achim zepi" instruments="drumcomputer" />
-        <ArtistLabel artist="achim zepi" instruments="drumcomputer" />
-        <ArtistLabel artist="achim zepi" instruments="drumcomputer" />
+        {currentSlots.map(({ artist, nextTrack, prevTrack }, idx) => {
+          return (
+            <ArtistLabel
+              key={idx}
+              artist={artist.name}
+              instruments={artist.instrument}
+              nextTrack={nextTrack}
+              prevTrack={prevTrack}
+            />
+          );
+        })}
       </div>
     </div>
   );
