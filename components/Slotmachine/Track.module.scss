@@ -1,0 +1,14 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  font-family: "akaPosse";
+  font-size: 1em;
+}

@@ -1,3 +1,5 @@
+import classes from './StartButton.module.scss';
+
 interface StartButtonProps {
   running: boolean;
   onStart: () => void;
@@ -11,7 +13,7 @@ const StartButton: React.FC<StartButtonProps> = ({
 }) => {
   return (
     <button
-      className="home_start-button"
+      className={classes.block}
       onClick={() => {
         if (running) {
           onStop();

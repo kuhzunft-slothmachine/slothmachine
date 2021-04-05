@@ -1,3 +1,6 @@
 .next/
 node_modules/
 .DS_Store
+public/media/*.mp3
+public/media/*.jpg
+public/media/*.JPG

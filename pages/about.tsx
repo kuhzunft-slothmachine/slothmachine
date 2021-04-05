@@ -2,11 +2,13 @@ import Head from "next/head";
 
 import Header from "../components/Header";
 import Main from "../components/Main";
-import About from "../components/About";
+import AboutContent from "../components/About";
 
-export default function Home() {
+import classes from './about.module.scss';
+
+export default function About() {
   return (
-    <div className="container">
+    <div className={classes.block}>
       <Head>
         <title>About Slotmachine</title>
       </Head>
@@ -14,7 +16,7 @@ export default function Home() {
       <Header />
 
       <Main>
-        <About />
+        <AboutContent />
       </Main>
     </div>
   );

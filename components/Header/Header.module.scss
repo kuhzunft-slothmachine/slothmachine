@@ -1,0 +1,29 @@
+.block {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 312px;
+  width: 100%;
+
+  margin-bottom: -38px;
+
+  background: url("/media/images/slot-high-back-dach.png");
+
+  z-index: 10;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 154px;
+
+  background: url("/media/images/unnamed.png");
+
+  z-index: 0;
+}

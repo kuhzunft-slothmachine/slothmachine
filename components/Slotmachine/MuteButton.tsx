@@ -1,12 +1,15 @@
+import classNames from "classnames";
+import classes from "./MuteButton.module.scss";
+
 interface MuteButtonProps {
   onClick?: () => void;
   muted?: boolean;
 }
 const MuteButton = ({ muted }: MuteButtonProps) => {
   return (
-    <button className="track_mute">
+    <button className={classes.block}>
       <img
-        className={muted ? "track_is-muted" : ""}
+        className={classNames({ [classes.muted]: muted })}
         src="/media/images/mute.png"
         alt="Mute track"
       />
