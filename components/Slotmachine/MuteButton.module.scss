@@ -1,6 +1,11 @@
 .block {
   width: 21px;
   height: 21px;
+
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .muted {
@@ -10,4 +15,5 @@
 .isAutoplaying {
   opacity: 0;
   pointer-events: none;
+  transform: scale(0.2);
 }

@@ -16,14 +16,11 @@ const MuteButton = ({ muted, onClick }: MuteButtonProps) => {
     <button
       className={classNames(classes.block, {
         [classes.isAutoplaying]: isAutoplaying,
+        [classes.muted]: muted,
       })}
       onClick={onClick}
     >
-      <img
-        className={classNames({ [classes.muted]: muted })}
-        src="/media/images/mute.png"
-        alt="Mute track"
-      />
+      <img src="/media/images/mute.png" alt="Mute track" />
     </button>
   );
 };

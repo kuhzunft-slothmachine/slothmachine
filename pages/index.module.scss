@@ -62,4 +62,10 @@
   background-size: cover;
 
   color: #282828;
+
+  opacity: 0.95;
+  &:hover {
+    opacity: 1;
+    transform: translate(0px, -1px);
+  }
 }
