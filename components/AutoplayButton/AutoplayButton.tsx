@@ -1,18 +1,25 @@
+import { useSelector, useDispatch } from "react-redux";
+
+import { ActionType, State } from "../../store/types";
+
 import classes from "./AutoplayButton.module.scss";
 
-interface AutoplayButtonProps {
-  state: boolean;
-  onToggle: () => void;
-}
+const AutoplayButton = () => {
+  const dispatch = useDispatch();
+  const isAutoplaying = useSelector<State>((state) => state.isAutoplaying);
 
-const AutoplayButton: React.FC<AutoplayButtonProps> = ({ state, onToggle }) => {
-  console.log('autostate', state);
   return (
     <div className={classes.block}>
       <div className={classes.label}>AUTO PLAY</div>
-      <button onClick={onToggle}>
+      <button
+        onClick={() => {
+          dispatch({ type: ActionType.ToggleAutoplay });
+        }}
+      >
         <img
-          src={`/media/images/slotmachine-random${state ? "on" : "off"}.png`}
+          src={`/media/images/slotmachine-random${
+            isAutoplaying ? "on" : "off"
+          }.png`}
         />
       </button>
     </div>

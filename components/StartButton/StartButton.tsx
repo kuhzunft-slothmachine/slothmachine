@@ -1,28 +1,25 @@
+import { useSelector, useDispatch } from "react-redux";
+
+import { ActionType, State } from "../../store/types";
+
 import classes from "./StartButton.module.scss";
 
-interface StartButtonProps {
-  running: boolean;
-  onStart: () => void;
-  onStop: () => void;
-}
+const StartButton = () => {
+  const dispatch = useDispatch();
+  const isPlaying = useSelector<State>((state) => state.isPlaying);
 
-const StartButton: React.FC<StartButtonProps> = ({
-  running,
-  onStart,
-  onStop,
-}) => {
   return (
     <button
       className={classes.block}
       onClick={() => {
-        if (running) {
-          onStop();
+        if (isPlaying) {
+          dispatch({ type: ActionType.Stop });
         } else {
-          onStart();
+          dispatch({ type: ActionType.Play });
         }
       }}
     >
-      {running ? "STOP" : "START"}
+      {isPlaying ? "STOP" : "START"}
     </button>
   );
 };

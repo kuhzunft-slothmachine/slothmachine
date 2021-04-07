@@ -1,24 +1,35 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import ArtistLabel from "./ArtistLabel";
 import TrackComponent from "./Track";
 
+import { Artist, State, Track } from "../../store/types";
+
 import classes from "./Slotmachine.module.scss";
 
-import { Action, ActionType, CurrentSlots } from "../../hooks/useArtists";
-
-interface SlotmachineProps {
-  currentSlots: CurrentSlots;
-  isAutoplaying: boolean;
-
-  dispatch: React.Dispatch<Action>;
+interface EnhancedSlots {
+  track: Track;
+  artist: Artist;
+  isPaused: boolean;
 }
 
-const Slotmachine = ({
-  currentSlots,
-  isAutoplaying,
-  dispatch,
-}: SlotmachineProps) => {
+const Slotmachine = () => {
+  const currentSlots = useSelector<State, EnhancedSlots[]>((state) => {
+    const result = state.currentSlots.map((slot) => {
+      const track = state.tracksById[slot.track_id];
+      const artist = state.artistsById[track.artist_id];
+
+      return {
+        ...slot,
+        track: state.tracksById[slot.track_id],
+        artist,
+      };
+    });
+
+    return result;
+  });
+
   return (
     <div className={classes.block}>
       <div className={classes.slots}>
@@ -44,21 +55,9 @@ const Slotmachine = ({
           return (
             <TrackComponent
               key={idx}
+              slot={idx}
               title={track.title}
               muted={isPaused}
-              onMute={() =>
-                dispatch({
-                  type: ActionType.Pause,
-                  trackSlot: idx,
-                })
-              }
-              onUnmute={() =>
-                dispatch({
-                  type: ActionType.Resume,
-                  trackSlot: idx,
-                })
-              }
-              isAutoplaying={isAutoplaying}
             />
           );
         })}
@@ -66,24 +65,12 @@ const Slotmachine = ({
 
       <div className={classes.artists}>
         {currentSlots.map(({ artist }, idx) => {
-          const shuffle = () => {
-            dispatch({
-              type: ActionType.Shuffle,
-              trackSlot: idx,
-            });
-            dispatch({
-              type: ActionType.Play,
-              trackSlot: idx,
-            });
-          };
-
           return (
             <ArtistLabel
               key={idx}
+              slot={idx}
               artist={artist.name}
               instruments={artist.instrument}
-              nextTrack={shuffle}
-              prevTrack={shuffle}
             />
           );
         })}

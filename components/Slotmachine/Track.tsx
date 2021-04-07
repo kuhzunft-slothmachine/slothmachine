@@ -1,36 +1,35 @@
+import { useDispatch } from "react-redux";
+import { ActionType } from "../../store/types";
+
 import MuteButton from "./MuteButton";
 
 import classes from "./Track.module.scss";
 
 interface TrackProps {
   title: string;
+  slot: number;
 
-  isAutoplaying: boolean;
-
-  onMute?: () => void;
-  onUnmute?: () => void;
   muted?: boolean;
 }
-const Track = ({
-  title,
-  muted,
-  onMute,
-  onUnmute,
-  isAutoplaying,
-}: TrackProps) => {
+const Track = ({ title, muted, slot }: TrackProps) => {
+  const dispatch = useDispatch();
+
   return (
     <div className={classes.block}>
-      <div className={classes.title} id="track-0">
-        {title}
-      </div>
+      <div className={classes.title}>{title}</div>
       <MuteButton
         muted={muted}
-        isAutoplaying={isAutoplaying}
         onClick={() => {
           if (muted) {
-            onUnmute();
+            dispatch({
+              type: ActionType.Resume,
+              trackSlot: slot,
+            });
           } else {
-            onMute();
+            dispatch({
+              type: ActionType.Pause,
+              trackSlot: slot,
+            });
           }
         }}
       />

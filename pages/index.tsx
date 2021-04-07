@@ -9,21 +9,11 @@ import Slotmachine from "../components/Slotmachine";
 import StartButton from "../components/StartButton";
 import AutoplayButton from "../components/AutoplayButton";
 
-import useArtists, { Artist, Track, ActionType } from "../hooks/useArtists";
+import { State } from "../store/types";
 
 import classes from "./index.module.scss";
 
-interface HomeProps {
-  artistsById: Record<string, Artist>;
-  tracks: Track[];
-}
-
-export default function Home({ artistsById, tracks }: HomeProps) {
-  const [{ currentSlots, isPlaying, isAutoplaying }, dispatch] = useArtists({
-    tracks,
-    artistsById,
-  });
-
+export default function Home() {
   return (
     <div className={classes.block}>
       <Header />
@@ -37,29 +27,18 @@ export default function Home({ artistsById, tracks }: HomeProps) {
             </a>
           </div>
           <div className={classes.slotmachineContainer}>
-            <Slotmachine
-              currentSlots={currentSlots}
-              isAutoplaying={isAutoplaying}
-              dispatch={dispatch}
-            />
+            <Slotmachine />
           </div>
           <div className={classes.sidebar}>
             <img src="/media/images/arrow-right.png" alt="...Now" />
-            <AutoplayButton
-              state={isAutoplaying}
-              onToggle={() => dispatch({ type: ActionType.ToggleAutoplay })}
-            />
+            <AutoplayButton />
           </div>
         </div>
         <div className={classes.footer}>
           <Link href="/about">
             <a className={classes.footerLink}>ABOUT</a>
           </Link>
-          <StartButton
-            running={isPlaying}
-            onStart={() => dispatch({ type: ActionType.Play })}
-            onStop={() => dispatch({ type: ActionType.Stop })}
-          />
+          <StartButton />
         </div>
       </Main>
     </div>
@@ -67,21 +46,36 @@ export default function Home({ artistsById, tracks }: HomeProps) {
 }
 
 export async function getStaticProps() {
-  const allArtists = await fs.readFile(
+  const artistsByIdJson = await fs.readFile(
     path.join(process.cwd(), "data/artists.json"),
     "utf8"
   );
-  const allTracks = await fs.readFile(
+  const artistsById = JSON.parse(artistsByIdJson);
+  const tracksByIdJson = await fs.readFile(
     path.join(process.cwd(), "data/tracks.json"),
     "utf8"
   );
+  const tracksById = JSON.parse(tracksByIdJson);
 
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
+  const tracksIds = Object.keys(tracksById);
+
+  const initialReduxState: State = {
+    isPlaying: false,
+    isAutoplaying: false,
+
+    currentSlots: [
+      { isPaused: false, track_id: tracksIds[0] },
+      { isPaused: false, track_id: tracksIds[1] },
+      { isPaused: false, track_id: tracksIds[2] },
+    ],
+
+    artistsById,
+    tracksById,
+  };
+
   return {
     props: {
-      artistsById: JSON.parse(allArtists),
-      tracks: Object.values(JSON.parse(allTracks)),
+      initialReduxState,
     },
   };
 }
