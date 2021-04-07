@@ -1,7 +1,8 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import { ActionType } from "../../store/types";
+import { ActionType, State } from "../../store/types";
 
+import classNames from "classnames";
 import classes from "./ArtistLabel.module.scss";
 
 interface ArtistLabelProps {
@@ -12,6 +13,8 @@ interface ArtistLabelProps {
 
 const ArtistLabel = ({ artist, instruments, slot }: ArtistLabelProps) => {
   const dispatch = useDispatch();
+  const isAutoplaying = useSelector<State>((state) => state.isAutoplaying);
+
   const label = `${artist} - ${instruments}`;
 
   const shuffle = () => {
@@ -27,7 +30,11 @@ const ArtistLabel = ({ artist, instruments, slot }: ArtistLabelProps) => {
 
   return (
     <div className={classes.block}>
-      <div className={classes.up}>
+      <div
+        className={classNames(classes.up, {
+          [classes.isAutoplaying]: isAutoplaying,
+        })}
+      >
         <button onClick={shuffle}>
           <img src="/media/images/arrowup.png" alt="Artist up" />
         </button>
@@ -35,7 +42,11 @@ const ArtistLabel = ({ artist, instruments, slot }: ArtistLabelProps) => {
       <div className={classes.label}>
         <h4>{label}</h4>
       </div>
-      <div className={classes.down}>
+      <div
+        className={classNames(classes.down, {
+          [classes.isAutoplaying]: isAutoplaying,
+        })}
+      >
         <button onClick={shuffle}>
           <img src="/media/images/arrowdown.png" alt="Artist down" />
         </button>
