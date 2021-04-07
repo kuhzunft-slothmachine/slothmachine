@@ -1,4 +1,4 @@
-import classes from './StartButton.module.scss';
+import classes from "./StartButton.module.scss";
 
 interface StartButtonProps {
   running: boolean;

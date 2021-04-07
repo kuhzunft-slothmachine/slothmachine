@@ -9,21 +9,19 @@ import Slotmachine from "../components/Slotmachine";
 import StartButton from "../components/StartButton";
 import AutoplayButton from "../components/AutoplayButton";
 
-import useArtists from "../hooks/useArtists";
+import useArtists, { Artist, Track, ActionType } from "../hooks/useArtists";
 
 import classes from "./index.module.scss";
 
-export default function Home({ allArtists, allTracks }) {
-  const {
-    currentSlots,
-    start,
-    stop,
-    isPlaying,
-    isAutoplaying,
-    toggleAutoplaying,
-  } = useArtists({
-    allTracks,
-    allArtists,
+interface HomeProps {
+  artistsById: Record<string, Artist>;
+  tracks: Track[];
+}
+
+export default function Home({ artistsById, tracks }: HomeProps) {
+  const [{ currentSlots, isPlaying, isAutoplaying }, dispatch] = useArtists({
+    tracks,
+    artistsById,
   });
 
   return (
@@ -42,13 +40,14 @@ export default function Home({ allArtists, allTracks }) {
             <Slotmachine
               currentSlots={currentSlots}
               isAutoplaying={isAutoplaying}
+              dispatch={dispatch}
             />
           </div>
           <div className={classes.sidebar}>
             <img src="/media/images/arrow-right.png" alt="...Now" />
             <AutoplayButton
               state={isAutoplaying}
-              onToggle={toggleAutoplaying}
+              onToggle={() => dispatch({ type: ActionType.ToggleAutoplay })}
             />
           </div>
         </div>
@@ -56,7 +55,11 @@ export default function Home({ allArtists, allTracks }) {
           <Link href="/about">
             <a className={classes.footerLink}>ABOUT</a>
           </Link>
-          <StartButton running={isPlaying} onStart={start} onStop={stop} />
+          <StartButton
+            running={isPlaying}
+            onStart={() => dispatch({ type: ActionType.Play })}
+            onStop={() => dispatch({ type: ActionType.Stop })}
+          />
         </div>
       </Main>
     </div>
@@ -77,8 +80,8 @@ export async function getStaticProps() {
   // will receive `posts` as a prop at build time
   return {
     props: {
-      allArtists: JSON.parse(allArtists),
-      allTracks: JSON.parse(allTracks),
+      artistsById: JSON.parse(allArtists),
+      tracks: Object.values(JSON.parse(allTracks)),
     },
   };
 }

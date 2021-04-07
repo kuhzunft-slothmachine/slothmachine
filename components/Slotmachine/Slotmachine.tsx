@@ -1,16 +1,24 @@
+import React from "react";
+
 import ArtistLabel from "./ArtistLabel";
 import TrackComponent from "./Track";
 
 import classes from "./Slotmachine.module.scss";
 
-import { CurrentSlots } from "../../hooks/useArtists";
+import { Action, ActionType, CurrentSlots } from "../../hooks/useArtists";
 
 interface SlotmachineProps {
   currentSlots: CurrentSlots;
   isAutoplaying: boolean;
+
+  dispatch: React.Dispatch<Action>;
 }
 
-const Slotmachine = ({ currentSlots, isAutoplaying }: SlotmachineProps) => {
+const Slotmachine = ({
+  currentSlots,
+  isAutoplaying,
+  dispatch,
+}: SlotmachineProps) => {
   return (
     <div className={classes.block}>
       <div className={classes.slots}>
@@ -32,13 +40,24 @@ const Slotmachine = ({ currentSlots, isAutoplaying }: SlotmachineProps) => {
       </div>
 
       <div className={classes.tracks}>
-        {currentSlots.map(({ track, muted, toggleMutedState }, idx) => {
+        {currentSlots.map(({ track, isPaused }, idx) => {
           return (
             <TrackComponent
               key={idx}
               title={track.title}
-              muted={muted}
-              onClick={toggleMutedState}
+              muted={isPaused}
+              onMute={() =>
+                dispatch({
+                  type: ActionType.Pause,
+                  trackSlot: idx,
+                })
+              }
+              onUnmute={() =>
+                dispatch({
+                  type: ActionType.Resume,
+                  trackSlot: idx,
+                })
+              }
               isAutoplaying={isAutoplaying}
             />
           );
@@ -46,14 +65,25 @@ const Slotmachine = ({ currentSlots, isAutoplaying }: SlotmachineProps) => {
       </div>
 
       <div className={classes.artists}>
-        {currentSlots.map(({ artist, nextTrack, prevTrack }, idx) => {
+        {currentSlots.map(({ artist }, idx) => {
+          const shuffle = () => {
+            dispatch({
+              type: ActionType.Shuffle,
+              trackSlot: idx,
+            });
+            dispatch({
+              type: ActionType.Play,
+              trackSlot: idx,
+            });
+          };
+
           return (
             <ArtistLabel
               key={idx}
               artist={artist.name}
               instruments={artist.instrument}
-              nextTrack={nextTrack}
-              prevTrack={prevTrack}
+              nextTrack={shuffle}
+              prevTrack={shuffle}
             />
           );
         })}

@@ -1,5 +1,7 @@
-import { useState } from "react";
-import useSound from "use-sound";
+import { useReducer, useRef } from "react";
+import produce from "immer";
+// import useSound from "use-sound";
+import { Howl } from "howler";
 
 export interface Track {
   title: string;
@@ -13,162 +15,217 @@ export interface Artist {
   instrument?: string;
 }
 
-export interface Slot {
-  id: string;
+interface TrackState {
+  isPaused: boolean;
+
   track: Track;
   artist: Artist;
-  muted: boolean;
-  toggleMutedState: () => void;
-  nextTrack: () => void;
-  prevTrack: () => void;
 }
 
-export type CurrentSlots = [Slot, Slot, Slot];
+export type CurrentSlots = [TrackState, TrackState, TrackState];
 
-const randomTrack = (
-  setter: (nextValue: string) => void,
-  trackIds: string[]
+interface State {
+  isAutoplaying: boolean;
+  isPlaying: boolean;
+
+  currentSlots: CurrentSlots;
+
+  artistsById: Record<string, Artist>;
+  tracks: Track[];
+}
+
+const initialState = ({
+  artistsById,
+  tracks,
+  initialSlots,
+}: {
+  artistsById: Record<string, Artist>;
+  tracks: Track[];
+  initialSlots: [number, number, number];
+}): State => {
+  // @ts-ignore
+  const currentSlots: CurrentSlots = initialSlots.map((index) => {
+    const track = tracks[index];
+    return {
+      isPaused: false,
+      track,
+      artist: artistsById[track.artist_id],
+    };
+  });
+
+  return {
+    isPlaying: false,
+    isAutoplaying: false,
+
+    currentSlots,
+
+    artistsById,
+    tracks,
+  };
+};
+
+export enum ActionType {
+  ToggleAutoplay = "toggleAutoplay",
+  Pause = "pause",
+  Resume = "resume",
+  Play = "play",
+  Stop = "stop",
+  Shuffle = "shuffle",
+}
+
+export type Action =
+  | { type: ActionType.ToggleAutoplay }
+  | { type: ActionType.Shuffle; trackSlot: number }
+  | { type: ActionType.Pause; trackSlot: number }
+  | { type: ActionType.Resume; trackSlot: number }
+  | { type: ActionType.Play; trackSlot?: number }
+  | { type: ActionType.Stop; trackSlot?: number };
+
+const reducer = produce((draft: State, action: Action): State => {
+  switch (action.type) {
+    case ActionType.ToggleAutoplay: {
+      draft.isAutoplaying = !draft.isAutoplaying;
+      break;
+    }
+    case ActionType.Pause: {
+      const track = draft.currentSlots[action.trackSlot];
+      track.isPaused = true;
+      break;
+    }
+
+    case ActionType.Resume: {
+      const track = draft.currentSlots[action.trackSlot];
+      track.isPaused = false;
+      break;
+    }
+
+    case ActionType.Play: {
+      draft.isPlaying = true;
+      break;
+    }
+
+    case ActionType.Stop: {
+      draft.isPlaying = false;
+      break;
+    }
+
+    case ActionType.Shuffle: {
+      const randomIndex = Math.floor(Math.random() * draft.tracks.length);
+      const track = draft.tracks[randomIndex];
+
+      draft.currentSlots[action.trackSlot] = {
+        ...draft.currentSlots[action.trackSlot],
+        track,
+        artist: draft.artistsById[track.artist_id],
+      };
+      break;
+    }
+    default: {
+      return draft;
+    }
+  }
+});
+
+const soundMiddleware = (
+  dispatch: React.Dispatch<Action>,
+  state: State,
+  howls: React.MutableRefObject<Howl[]>
 ) => {
-  return () => setter(trackIds[Math.floor(Math.random() * trackIds.length)]);
+  return (action: Action) => {
+    switch (action.type) {
+      case ActionType.Shuffle: {
+        if (!state.isPlaying) {
+          break;
+        }
+
+        const { trackSlot } = action;
+        const currentHowl = howls.current[trackSlot];
+
+        if (currentHowl) {
+          currentHowl.stop();
+        }
+
+        break;
+      }
+
+      case ActionType.Play: {
+        const playSlot = (slot: TrackState, index: number) => {
+          const howl = new Howl({
+            src: [`/media/${slot.track.audio}`],
+            loop: true,
+          });
+
+          howls.current[index] = howl;
+
+          howl.play();
+          if (state.currentSlots[index].isPaused) {
+            howl.pause();
+          }
+        };
+
+        if (action.trackSlot != null) {
+          playSlot(state.currentSlots[action.trackSlot], action.trackSlot);
+        } else {
+          state.currentSlots.forEach(playSlot);
+        }
+
+        break;
+      }
+      case ActionType.Stop: {
+        howls.current.forEach((howl) => {
+          howl.stop();
+        });
+        howls.current = [];
+
+        break;
+      }
+      case ActionType.Pause: {
+        if (!state.isPlaying) {
+          break;
+        }
+
+        const { trackSlot } = action;
+        const howl = howls.current[trackSlot];
+        if (howl) {
+          howl.pause();
+        }
+
+        break;
+      }
+      case ActionType.Resume: {
+        if (!state.isPlaying) {
+          break;
+        }
+
+        const { trackSlot } = action;
+        const howl = howls.current[trackSlot];
+        if (howl) {
+          howl.play();
+        }
+
+        break;
+      }
+    }
+    dispatch(action);
+  };
 };
 
 const useArtists = ({
-  allTracks,
-  allArtists,
+  tracks,
+  artistsById,
 }: {
-  allTracks: Track[];
-  allArtists: Artist[];
-}): {
-  start: () => void;
-  stop: () => void;
-  isPlaying: boolean;
-  isAutoplaying: boolean;
-  toggleAutoplaying: () => void;
-  currentSlots: CurrentSlots;
-} => {
-  const trackIds = Object.keys(allTracks);
+  tracks: Track[];
+  artistsById: Record<string, Artist>;
+}): [State, React.Dispatch<Action>] => {
+  const howls = useRef<Howl[]>([]);
+  const [state, rawDispatch] = useReducer(
+    reducer,
+    { artistsById, tracks, initialSlots: [0, 1, 2] },
+    initialState
+  );
+  const dispatch = soundMiddleware(rawDispatch, state, howls);
 
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const [isAutoplaying, setIsAutoplaying] = useState<boolean>(false);
-
-  const [trackId1, setTrackId1] = useState<string>(() => {
-    return trackIds[0];
-  });
-  const [trackId2, setTrackId2] = useState(() => {
-    return trackIds[1];
-  });
-  const [trackId3, setTrackId3] = useState(() => {
-    return trackIds[2];
-  });
-
-  const track1: Track = allTracks[trackId1];
-  const track2: Track = allTracks[trackId2];
-  const track3: Track = allTracks[trackId3];
-
-  const [
-    playTrack1,
-    {
-      pause: pauseTrack1,
-      stop: stopTrack1,
-      isPlaying: isPlayingTrack1,
-      sound: track1Sound,
-    },
-  ] = useSound(`/media/${track1.audio}`, { preload: false });
-  const [
-    playTrack2,
-    {
-      pause: pauseTrack2,
-      stop: stopTrack2,
-      isPlaying: isPlayingTrack2,
-      sound: track2Sound,
-    },
-  ] = useSound(`/media/${track2.audio}`, { preload: false });
-  const [
-    playTrack3,
-    {
-      pause: pauseTrack3,
-      stop: stopTrack3,
-      isPlaying: isPlayingTrack3,
-      sound: track3Sound,
-    },
-  ] = useSound(`/media/${track3.audio}`, { preload: false });
-
-  return {
-    start: () => {
-      track1Sound.load();
-      track2Sound.load();
-      track3Sound.load();
-
-      playTrack1();
-      playTrack2();
-      playTrack3();
-
-      setIsPlaying(true);
-    },
-    stop: () => {
-      stopTrack1();
-      stopTrack2();
-      stopTrack3();
-
-      setIsPlaying(false);
-    },
-    isPlaying,
-    isAutoplaying,
-    toggleAutoplaying: () => {
-      if (isAutoplaying) {
-        setIsAutoplaying(false);
-      } else {
-        setIsAutoplaying(true);
-      }
-    },
-    currentSlots: [
-      {
-        id: trackId1,
-        track: track1,
-        artist: allArtists[track1.artist_id],
-        muted: !isPlayingTrack1,
-        toggleMutedState: () => {
-          if (isPlayingTrack1) {
-            pauseTrack1();
-          } else {
-            playTrack1();
-          }
-        },
-        nextTrack: randomTrack(setTrackId1, trackIds),
-        prevTrack: randomTrack(setTrackId1, trackIds),
-      },
-      {
-        id: trackId2,
-        track: track2,
-        artist: allArtists[track2.artist_id],
-        muted: !isPlayingTrack2,
-        toggleMutedState: () => {
-          if (isPlayingTrack2) {
-            pauseTrack2();
-          } else {
-            playTrack2();
-          }
-        },
-        nextTrack: randomTrack(setTrackId2, trackIds),
-        prevTrack: randomTrack(setTrackId2, trackIds),
-      },
-      {
-        id: trackId3,
-        track: track3,
-        artist: allArtists[track3.artist_id],
-        muted: !isPlayingTrack3,
-        toggleMutedState: () => {
-          if (isPlayingTrack3) {
-            pauseTrack3();
-          } else {
-            playTrack3();
-          }
-        },
-        nextTrack: randomTrack(setTrackId3, trackIds),
-        prevTrack: randomTrack(setTrackId3, trackIds),
-      },
-    ],
-  };
+  return [state, dispatch];
 };
 
 export default useArtists;

@@ -7,10 +7,17 @@ interface TrackProps {
 
   isAutoplaying: boolean;
 
-  onClick?: () => void;
+  onMute?: () => void;
+  onUnmute?: () => void;
   muted?: boolean;
 }
-const Track = ({ title, muted, onClick, isAutoplaying }: TrackProps) => {
+const Track = ({
+  title,
+  muted,
+  onMute,
+  onUnmute,
+  isAutoplaying,
+}: TrackProps) => {
   return (
     <div className={classes.block}>
       <div className={classes.title} id="track-0">
@@ -19,7 +26,13 @@ const Track = ({ title, muted, onClick, isAutoplaying }: TrackProps) => {
       <MuteButton
         muted={muted}
         isAutoplaying={isAutoplaying}
-        onClick={onClick}
+        onClick={() => {
+          if (muted) {
+            onUnmute();
+          } else {
+            onMute();
+          }
+        }}
       />
     </div>
   );
