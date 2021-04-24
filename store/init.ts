@@ -13,6 +13,7 @@ const initialState = {
 
   artistsById: {},
   tracksById: {},
+  tracks: []
 };
 
 const initStore = (preloadedState: State = initialState) => {

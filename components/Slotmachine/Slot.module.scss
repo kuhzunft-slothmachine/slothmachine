@@ -1,0 +1,16 @@
+.block {
+  width: 210px;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.strip {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    height: 200px;
+  }
+}
+

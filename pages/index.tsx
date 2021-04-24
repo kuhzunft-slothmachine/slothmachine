@@ -71,6 +71,7 @@ export async function getStaticProps() {
 
     artistsById,
     tracksById,
+    tracks: Object.values(tracksById)
   };
 
   return {

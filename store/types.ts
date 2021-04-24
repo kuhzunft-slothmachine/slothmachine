@@ -26,6 +26,7 @@ export interface State {
 
   artistsById: Record<string, Artist>;
   tracksById: Record<string, Track>;
+  tracks: Track[];
 }
 
 export enum ActionType {

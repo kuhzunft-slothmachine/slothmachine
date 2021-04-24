@@ -1,49 +1,23 @@
 import React from "react";
-import { useSelector } from "react-redux";
 
 import ArtistLabel from "./ArtistLabel";
 import TrackComponent from "./Track";
+import Slot from "./Slot";
 
-import { Artist, State, Track } from "../../store/types";
+import useCurrentSlots from "../../hooks/useCurrentSlots";
 
 import classes from "./Slotmachine.module.scss";
 
-interface EnhancedSlots {
-  track: Track;
-  artist: Artist;
-  isPaused: boolean;
-}
-
 const Slotmachine = () => {
-  const currentSlots = useSelector<State, EnhancedSlots[]>((state) => {
-    const result = state.currentSlots.map((slot) => {
-      const track = state.tracksById[slot.track_id];
-      const artist = state.artistsById[track.artist_id];
-
-      return {
-        ...slot,
-        track: state.tracksById[slot.track_id],
-        artist,
-      };
-    });
-
-    return result;
-  });
+  const currentSlots = useCurrentSlots();
 
   return (
     <div className={classes.block}>
       <div className={classes.slots}>
         <div className={classes.photos}>
-          {currentSlots.map(({ track, artist }, idx) => {
-            return (
-              <div key={idx} className={classes.photo}>
-                <img
-                  src={`/media/${track.photo}`}
-                  alt={`Picture of the ${artist.name}`}
-                />
-              </div>
-            );
-          })}
+          <Slot slotIdx={0} />
+          <Slot slotIdx={1} />
+          <Slot slotIdx={2} />
         </div>
         <div className={classes.frame}>
           <img src="/media/images/photo-frame.png" alt="Slotmachine Frame" />
