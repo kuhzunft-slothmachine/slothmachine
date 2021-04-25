@@ -22,6 +22,7 @@ export interface State {
   isPlaying: boolean;
 
   currentSlots?: CurrentSlots;
+  selectedSlotIdx?: number;
 
   artistsById: Record<string, Artist>;
 
@@ -29,6 +30,7 @@ export interface State {
 }
 
 export enum ActionType {
+  Selection = "selection",
   ToggleAutoplay = "toggleAutoplay",
   Pause = "pause",
   Resume = "resume",
@@ -38,9 +40,10 @@ export enum ActionType {
 }
 
 export type Action =
+  | { type: ActionType.Selection, direction: "left" | "right" | "clear" }
   | { type: ActionType.ToggleAutoplay }
   | { type: ActionType.Shuffle; trackSlot: number }
-  | { type: ActionType.Pause; trackSlot: number }
+  | { type: ActionType.Pause; trackSlot?: number }
   | { type: ActionType.Resume; trackSlot: number }
   | { type: ActionType.Play; trackSlot?: number }
   | { type: ActionType.Stop; trackSlot?: number };

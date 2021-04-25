@@ -4,6 +4,31 @@ import { State, Action, ActionType } from "./types";
 
 const reducer = produce((draft: State, action: Action): State => {
   switch (action.type) {
+    case ActionType.Selection: {
+      if (draft.selectedSlotIdx != null) {
+        if (action.direction === "left") {
+          if (draft.selectedSlotIdx === 0) {
+            draft.selectedSlotIdx = draft.currentSlots.length - 1;
+          } else {
+            draft.selectedSlotIdx = draft.selectedSlotIdx - 1;
+          }
+        }
+        if (action.direction === "right") {
+          if (draft.selectedSlotIdx === draft.currentSlots.length - 1) {
+            draft.selectedSlotIdx = 0;
+          } else {
+            draft.selectedSlotIdx = draft.selectedSlotIdx + 1;
+          }
+        }
+        if (action.direction === "clear") {
+          draft.selectedSlotIdx = undefined;
+        }
+      } else {
+        draft.selectedSlotIdx = 0;
+      }
+      break;
+    }
+
     case ActionType.ToggleAutoplay: {
       draft.isAutoplaying = !draft.isAutoplaying;
       break;

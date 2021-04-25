@@ -9,11 +9,15 @@ import Slotmachine from "../components/Slotmachine";
 import StartButton from "../components/StartButton";
 import AutoplayButton from "../components/AutoplayButton";
 
+import useJoystick from "../hooks/useJotstick";
+
 import { State, Track } from "../store/types";
 
 import classes from "./index.module.scss";
 
 export default function Home() {
+  useJoystick();
+
   return (
     <div className={classes.block}>
       <Header />

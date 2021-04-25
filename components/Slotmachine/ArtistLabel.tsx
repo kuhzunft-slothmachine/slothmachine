@@ -13,7 +13,13 @@ interface ArtistLabelProps {
 
 const ArtistLabel = ({ artist, instruments, slot }: ArtistLabelProps) => {
   const dispatch = useDispatch();
-  const isAutoplaying = useSelector<State>((state) => state.isAutoplaying);
+  const isAutoplaying = useSelector<State, boolean>(
+    (state) => state.isAutoplaying
+  );
+
+  const [selectionMode, isSelected] = useSelector<State, [boolean, boolean]>(
+    (state) => [state.selectedSlotIdx != null, state.selectedSlotIdx === slot]
+  );
 
   const label = `${artist} - ${instruments}`;
 
@@ -33,6 +39,8 @@ const ArtistLabel = ({ artist, instruments, slot }: ArtistLabelProps) => {
       <div
         className={classNames(classes.up, {
           [classes.isAutoplaying]: isAutoplaying,
+          [classes.selectionMode]: selectionMode,
+          [classes.selected]: isSelected,
         })}
       >
         <button onClick={shuffle}>
@@ -45,6 +53,8 @@ const ArtistLabel = ({ artist, instruments, slot }: ArtistLabelProps) => {
       <div
         className={classNames(classes.down, {
           [classes.isAutoplaying]: isAutoplaying,
+          [classes.selectionMode]: selectionMode,
+          [classes.selected]: isSelected,
         })}
       >
         <button onClick={shuffle}>
