@@ -1,16 +1,11 @@
 .block {
-  width: 210px;
-  height: 100%;
-
-  overflow: hidden;
+  transition: all 0.2s ease-in-out;
 }
 
-.strip {
-  display: flex;
-  flex-direction: column;
-
-  img {
-    height: 200px;
-  }
+.image {
+  height: 200px;
 }
 
+.muted {
+  opacity: 0.4;
+}

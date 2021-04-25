@@ -31,14 +31,16 @@ const reducer = produce((draft: State, action: Action): State => {
     }
 
     case ActionType.Shuffle: {
-      const tracksIds = Object.keys(draft.tracksById);
-      const randomIndex = Math.floor(Math.random() * tracksIds.length);
-      const trackId = tracksIds[randomIndex];
+      if (action.trackSlot != null) {
+        const trackIdx = Math.floor(Math.random() * draft.tracks.length);
+        draft.currentSlots[action.trackSlot].trackIdx = trackIdx;
+      } else {
+        [0, 1, 2].forEach((trackSlot) => {
+          const trackIdx = Math.floor(Math.random() * draft.tracks.length);
+          draft.currentSlots[trackSlot].trackIdx = trackIdx;
+        });
+      }
 
-      draft.currentSlots[action.trackSlot] = {
-        ...draft.currentSlots[action.trackSlot],
-        track_id: trackId,
-      };
       break;
     }
     default: {

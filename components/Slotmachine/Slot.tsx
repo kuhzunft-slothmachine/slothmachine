@@ -1,5 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import classNames from "classnames";
+
+import RotatingSlot from "./RotatingSlot";
 
 import useSlot from "../../hooks/useSlot";
 
@@ -8,28 +11,34 @@ import { State, Track } from "../../store/types";
 
 interface SlotProps {
   slotIdx: number;
+  className?: string;
 }
 
-const Slot = ({ slotIdx }: SlotProps) => {
+const Slot = ({ slotIdx, className }: SlotProps) => {
   const slot = useSlot(slotIdx);
-  console.log(slot);
+  const { trackIdx } = slot;
 
   const tracks = useSelector<State, Track[]>((state) => state.tracks);
 
   return (
-    <div className={classes.block}>
-      <div className={classes.strip}>
-        {tracks.map((track) => {
-          return (
-            <img
-              key={track.photo}
-              src={`/media/${track.photo}`}
-              alt={`Picture of the ${track.title}`}
-            />
-          );
-        })}
-      </div>
-    </div>
+    <RotatingSlot
+      target={trackIdx}
+      times={5}
+      className={classNames(classes.block, className, {
+        [classes.muted]: slot.isPaused,
+      })}
+    >
+      {tracks.map((track) => {
+        return (
+          <img
+            className={classes.image}
+            key={track.photo}
+            src={`/media/${track.photo}`}
+            alt={`Picture of the ${track.title}`}
+          />
+        );
+      })}
+    </RotatingSlot>
   );
 };
 

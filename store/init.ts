@@ -12,7 +12,6 @@ const initialState = {
   isAutoplaying: false,
 
   artistsById: {},
-  tracksById: {},
   tracks: []
 };
 

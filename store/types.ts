@@ -12,8 +12,7 @@ export interface Artist {
 
 export interface TrackState {
   isPaused: boolean;
-
-  track_id: string;
+  trackIdx: number;
 }
 
 export type CurrentSlots = [TrackState, TrackState, TrackState];
@@ -25,7 +24,7 @@ export interface State {
   currentSlots?: CurrentSlots;
 
   artistsById: Record<string, Artist>;
-  tracksById: Record<string, Track>;
+
   tracks: Track[];
 }
 

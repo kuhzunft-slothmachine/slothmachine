@@ -9,7 +9,7 @@ import Slotmachine from "../components/Slotmachine";
 import StartButton from "../components/StartButton";
 import AutoplayButton from "../components/AutoplayButton";
 
-import { State } from "../store/types";
+import { State, Track } from "../store/types";
 
 import classes from "./index.module.scss";
 
@@ -56,22 +56,20 @@ export async function getStaticProps() {
     "utf8"
   );
   const tracksById = JSON.parse(tracksByIdJson);
-
-  const tracksIds = Object.keys(tracksById);
+  const tracks: Track[] = Object.values(tracksById);
 
   const initialReduxState: State = {
     isPlaying: false,
     isAutoplaying: false,
 
     currentSlots: [
-      { isPaused: false, track_id: tracksIds[0] },
-      { isPaused: false, track_id: tracksIds[1] },
-      { isPaused: false, track_id: tracksIds[2] },
+      { isPaused: false, trackIdx: 0 },
+      { isPaused: false, trackIdx: 1 },
+      { isPaused: false, trackIdx: 2 },
     ],
 
     artistsById,
-    tracksById,
-    tracks: Object.values(tracksById)
+    tracks
   };
 
   return {

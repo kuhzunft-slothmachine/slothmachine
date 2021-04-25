@@ -30,7 +30,7 @@ const soundMiddleware: Middleware<{}, State> = (store) => (next) => (
 
     case ActionType.Play: {
       const playSlot = (slot: TrackState, index: number) => {
-        const track = state.tracksById[slot.track_id];
+        const track = state.tracks[slot.trackIdx];
 
         const howl = new Howl({
           src: [`/media/${track.audio}`],
