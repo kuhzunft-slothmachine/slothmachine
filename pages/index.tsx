@@ -9,7 +9,7 @@ import Slotmachine from "../components/Slotmachine";
 import StartButton from "../components/StartButton";
 import AutoplayButton from "../components/AutoplayButton";
 
-import useJoystick from "../hooks/useJotstick";
+import useJoystick from "../hooks/useJoystick";
 
 import { State, Track } from "../store/types";
 
@@ -68,8 +68,8 @@ export async function getStaticProps() {
 
     currentSlots: [
       { isPaused: false, trackIdx: 0 },
-      { isPaused: false, trackIdx: 1 },
-      { isPaused: false, trackIdx: 2 },
+      { isPaused: false, trackIdx: 0 },
+      { isPaused: false, trackIdx: 0 },
     ],
 
     artistsById,

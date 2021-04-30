@@ -1,7 +1,8 @@
 import { useStore, useDispatch } from "react-redux";
-import { ActionType, State } from "../store/types";
+import { ActionType } from "../store/types";
 
 import useKeyboardShortcut from "./useKeyboardShortcut";
+import useGamepad from "./useGamepad";
 
 const useJoystick = () => {
   const dispatch = useDispatch();
@@ -67,6 +68,45 @@ const useJoystick = () => {
       });
     }
   };
+
+  useGamepad({
+    onButtonPressed: (index) => {
+      switch (index) {
+        case 0: {
+          togglePlay();
+          break;
+        }
+        case 1: {
+          toggleAutoplay();
+          break;
+        }
+        case 2: {
+          toggleMute();
+          break;
+        }
+      }
+    },
+    onAxisPressed: (direction) => {
+      switch (direction) {
+        case "up": {
+          shuffle();
+          break;
+        }
+        case "down": {
+          shuffle();
+          break;
+        }
+        case "left": {
+          selectLeft();
+          break;
+        }
+        case "right": {
+          selectRight();
+          break;
+        }
+      }
+    },
+  });
 
   useKeyboardShortcut(["esc"], clearSelectionMode);
   useKeyboardShortcut(["left"], selectLeft);
