@@ -2,6 +2,7 @@ import { promises as fs } from "fs";
 import path from "path";
 
 import Link from "next/link";
+import {useDispatch} from "react-redux";
 
 import Header from "../components/Header";
 import Main from "../components/Main";
@@ -10,13 +11,20 @@ import StartButton from "../components/StartButton";
 import AutoplayButton from "../components/AutoplayButton";
 
 import useJoystick from "../hooks/useJoystick";
+import useTimeout from "../hooks/useTimeout";
 
-import { State, Track } from "../store/types";
+import { ActionType, State, Track } from "../store/types";
 
 import classes from "./index.module.scss";
 
 export default function Home() {
+  const dispatch = useDispatch();
+
   useJoystick();
+  useTimeout(() => {
+    dispatch({ type: ActionType.Shuffle });
+  }, 1000);
+
 
   return (
     <div className={classes.block}>
