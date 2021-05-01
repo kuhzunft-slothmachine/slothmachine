@@ -1,10 +1,15 @@
 import produce from "immer";
 
-import { State, Action, ActionType } from "./types";
+import { State } from "./types";
+import { Action, ActionType } from "./actions";
 
 const reducer = produce((draft: State, action: Action): State => {
   switch (action.type) {
     case ActionType.Selection: {
+      if (draft.isAutoplaying) {
+        break;
+      }
+
       if (draft.selectedSlotIdx != null) {
         if (action.direction === "left") {
           if (draft.selectedSlotIdx === 0) {
@@ -33,15 +38,14 @@ const reducer = produce((draft: State, action: Action): State => {
       draft.isAutoplaying = !draft.isAutoplaying;
       break;
     }
-    case ActionType.Pause: {
-      const track = draft.currentSlots[action.trackSlot];
-      track.isPaused = true;
-      break;
-    }
 
-    case ActionType.Resume: {
-      const track = draft.currentSlots[action.trackSlot];
-      track.isPaused = false;
+    case ActionType.ToggleMute: {
+      if (draft.isAutoplaying) {
+        break;
+      }
+
+      const track = draft.currentSlots[action.slot];
+      track.muted = action.muted != null ? action.muted : !track.muted;
       break;
     }
 
@@ -56,9 +60,9 @@ const reducer = produce((draft: State, action: Action): State => {
     }
 
     case ActionType.Shuffle: {
-      if (action.trackSlot != null) {
+      if (action.slot != null) {
         const trackIdx = Math.floor(Math.random() * draft.tracks.length);
-        draft.currentSlots[action.trackSlot].trackIdx = trackIdx;
+        draft.currentSlots[action.slot].trackIdx = trackIdx;
       } else {
         [0, 1, 2].forEach((trackSlot) => {
           const trackIdx = Math.floor(Math.random() * draft.tracks.length);

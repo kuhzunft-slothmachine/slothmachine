@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 
-import { ActionType, State } from "../../store/types";
+import { State } from "../../store/types";
+import { togglePlay } from "../../store/actions";
 
 import classes from "./StartButton.module.scss";
 
@@ -12,11 +13,7 @@ const StartButton = () => {
     <button
       className={classes.block}
       onClick={() => {
-        if (isPlaying) {
-          dispatch({ type: ActionType.Stop });
-        } else {
-          dispatch({ type: ActionType.Play });
-        }
+        dispatch(togglePlay());
       }}
     >
       {isPlaying ? "STOP" : "START"}

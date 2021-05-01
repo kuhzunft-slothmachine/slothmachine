@@ -25,13 +25,13 @@ const Slotmachine = () => {
       </div>
 
       <div className={classes.tracks}>
-        {currentSlots.map(({ track, isPaused }, idx) => {
+        {currentSlots.map(({ track, muted }, idx) => {
           return (
             <TrackComponent
               key={idx}
               slot={idx}
               title={track.title}
-              muted={isPaused}
+              muted={muted}
             />
           );
         })}

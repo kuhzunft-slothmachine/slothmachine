@@ -2,7 +2,7 @@ import { promises as fs } from "fs";
 import path from "path";
 
 import Link from "next/link";
-import {useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 
 import Header from "../components/Header";
 import Main from "../components/Main";
@@ -13,7 +13,8 @@ import AutoplayButton from "../components/AutoplayButton";
 import useJoystick from "../hooks/useJoystick";
 import useTimeout from "../hooks/useTimeout";
 
-import { ActionType, State, Track } from "../store/types";
+import { State, Track } from "../store/types";
+import { shuffle } from "../store/actions";
 
 import classes from "./index.module.scss";
 
@@ -22,9 +23,8 @@ export default function Home() {
 
   useJoystick();
   useTimeout(() => {
-    dispatch({ type: ActionType.Shuffle });
+    dispatch(shuffle());
   }, 1000);
-
 
   return (
     <div className={classes.block}>
@@ -75,13 +75,13 @@ export async function getStaticProps() {
     isAutoplaying: false,
 
     currentSlots: [
-      { isPaused: false, trackIdx: 0 },
-      { isPaused: false, trackIdx: 0 },
-      { isPaused: false, trackIdx: 0 },
+      { muted: false, trackIdx: 0 },
+      { muted: false, trackIdx: 0 },
+      { muted: false, trackIdx: 0 },
     ],
 
     artistsById,
-    tracks
+    tracks,
   };
 
   return {

@@ -1,5 +1,12 @@
 import { useStore, useDispatch } from "react-redux";
-import { ActionType } from "../store/types";
+
+import {
+  select,
+  shuffle,
+  toggleAutoplay,
+  toggleMute,
+  togglePlay,
+} from "../store/actions";
 
 import useKeyboardShortcut from "./useKeyboardShortcut";
 import useGamepad from "./useGamepad";
@@ -9,79 +16,54 @@ const useJoystick = () => {
   const store = useStore();
 
   const clearSelectionMode = () => {
-    dispatch({ type: ActionType.Selection, direction: "clear" });
+    dispatch(select({ direction: "clear" }));
   };
   const selectLeft = () => {
-    dispatch({ type: ActionType.Selection, direction: "left" });
+    dispatch(select({ direction: "left" }));
   };
   const selectRight = () => {
-    dispatch({ type: ActionType.Selection, direction: "right" });
+    dispatch(select({ direction: "right" }));
   };
 
-  const toggleMute = () => {
+  const handleToggleMute = () => {
     const state = store.getState();
     const { selectedSlotIdx } = state;
 
     if (selectedSlotIdx != null) {
-      const { isPaused } = state.currentSlots[selectedSlotIdx];
-      if (isPaused) {
-        dispatch({
-          type: ActionType.Resume,
-          trackSlot: selectedSlotIdx,
-        });
-      } else {
-        dispatch({
-          type: ActionType.Pause,
-          trackSlot: selectedSlotIdx,
-        });
-      }
+      dispatch(toggleMute({ slot: selectedSlotIdx }));
     }
   };
 
-  const toggleAutoplay = () => {
-    dispatch({
-      type: ActionType.ToggleAutoplay,
-    });
+  const handleToggleAutoplay = () => {
+    dispatch(toggleAutoplay());
+
   };
 
-  const shuffle = () => {
+  const handleShuffle = () => {
     const state = store.getState();
     const { selectedSlotIdx } = state;
     if (selectedSlotIdx != null) {
-      dispatch({
-        type: ActionType.Shuffle,
-        trackSlot: selectedSlotIdx,
-      });
+      dispatch(shuffle({ slot: selectedSlotIdx }));
     }
   };
 
-  const togglePlay = () => {
-    const state = store.getState();
-    const { isPlaying } = state;
-    if (isPlaying) {
-      dispatch({
-        type: ActionType.Stop,
-      });
-    } else {
-      dispatch({
-        type: ActionType.Play,
-      });
-    }
+  const handleTogglePlay = () => {
+    dispatch(togglePlay());
   };
 
   useGamepad({
     onButtonPressed: (index) => {
       switch (index) {
         case 0: {
-          togglePlay();
+          handleTogglePlay();
           break;
         }
         case 1: {
-          toggleAutoplay();
+          handleToggleAutoplay();
           break;
         }
         case 2: {
-          toggleMute();
+          handleToggleMute();
           break;
         }
       }
@@ -89,11 +71,11 @@ const useJoystick = () => {
     onAxisPressed: (direction) => {
       switch (direction) {
         case "up": {
-          shuffle();
+          handleShuffle();
           break;
         }
         case "down": {
-          shuffle();
+          handleShuffle();
           break;
         }
         case "left": {
@@ -112,12 +94,12 @@ const useJoystick = () => {
   useKeyboardShortcut(["left"], selectLeft);
   useKeyboardShortcut(["right"], selectRight);
 
-  useKeyboardShortcut(["up", "down"], shuffle);
+  useKeyboardShortcut(["up", "down"], handleShuffle);
 
-  useKeyboardShortcut(["m", "M"], toggleMute);
-  useKeyboardShortcut(["a", "A"], toggleAutoplay);
+  useKeyboardShortcut(["m", "M"], handleToggleMute);
+  useKeyboardShortcut(["a", "A"], handleToggleAutoplay);
 
-  useKeyboardShortcut(["space"], togglePlay);
+  useKeyboardShortcut(["space"], handleTogglePlay);
 };
 
 export default useJoystick;

@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
-import { ActionType } from "../../store/types";
+
+import { toggleMute } from "../../store/actions";
 
 import MuteButton from "./MuteButton";
 
@@ -20,17 +21,7 @@ const Track = ({ title, muted, slot }: TrackProps) => {
       <MuteButton
         muted={muted}
         onClick={() => {
-          if (muted) {
-            dispatch({
-              type: ActionType.Resume,
-              trackSlot: slot,
-            });
-          } else {
-            dispatch({
-              type: ActionType.Pause,
-              trackSlot: slot,
-            });
-          }
+          dispatch(toggleMute({ slot }));
         }}
       />
     </div>

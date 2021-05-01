@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import { ActionType, State } from "../../store/types";
+import { State } from "../../store/types";
+import { shuffle } from "../../store/actions";
 
 import classNames from "classnames";
 import classes from "./ArtistLabel.module.scss";
@@ -23,15 +24,8 @@ const ArtistLabel = ({ artist, instruments, slot }: ArtistLabelProps) => {
 
   const label = `${artist} - ${instruments}`;
 
-  const shuffle = () => {
-    dispatch({
-      type: ActionType.Shuffle,
-      trackSlot: slot,
-    });
-    dispatch({
-      type: ActionType.Play,
-      trackSlot: slot,
-    });
+  const onShuffle = () => {
+    dispatch(shuffle({ slot }));
   };
 
   return (
@@ -43,7 +37,7 @@ const ArtistLabel = ({ artist, instruments, slot }: ArtistLabelProps) => {
           [classes.selected]: isSelected,
         })}
       >
-        <button onClick={shuffle}>
+        <button onClick={onShuffle}>
           <img src="/media/images/arrowup.png" alt="Artist up" />
         </button>
       </div>
@@ -57,7 +51,7 @@ const ArtistLabel = ({ artist, instruments, slot }: ArtistLabelProps) => {
           [classes.selected]: isSelected,
         })}
       >
-        <button onClick={shuffle}>
+        <button onClick={onShuffle}>
           <img src="/media/images/arrowdown.png" alt="Artist down" />
         </button>
       </div>

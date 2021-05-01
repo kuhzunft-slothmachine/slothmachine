@@ -1,93 +1,144 @@
 import { Middleware } from "redux";
 import { Howl } from "howler";
 
-import { Action, ActionType, State, TrackState } from "./types";
+import { State, TrackState } from "./types";
 
-let howls = [];
+import { Action, ActionType, play, shuffle, stop } from "./actions";
 
-const soundMiddleware: Middleware<{}, State> = (store) => (next) => (
-  action: Action
-) => {
-  next(action);
+const createSoundMiddleware = (howls: Howl[]) => {
+  const soundMiddleware: Middleware<{}, State> = (store) => (next) => (
+    action: Action
+  ) => {
+    next(action);
 
-  const state = store.getState();
+    const state = store.getState();
 
-  switch (action.type) {
-    case ActionType.Shuffle: {
-      if (!state.isPlaying) {
+    switch (action.type) {
+      case ActionType.Shuffle: {
+        const { slot } = action;
+        const currentHowl = howls[slot];
+
+        if (currentHowl) {
+          currentHowl.stop();
+        }
+
+        if (state.isPlaying) {
+          store.dispatch(play({ slot }));
+        }
+
         break;
       }
 
-      const { trackSlot } = action;
-      const currentHowl = howls[trackSlot];
+      case ActionType.TogglePlay: {
+        if (state.isPlaying) {
+          store.dispatch(stop());
+        } else {
+          store.dispatch(play());
+        }
 
-      if (currentHowl) {
-        currentHowl.stop();
+        break;
       }
 
-      break;
-    }
+      case ActionType.ToggleMute: {
+        const { slot } = action;
+        const currentHowl = howls[slot];
+        const track = state.currentSlots[slot];
 
-    case ActionType.Play: {
-      const playSlot = (slot: TrackState, index: number) => {
-        const track = state.tracks[slot.trackIdx];
+        console.log("next mute state", track.muted, currentHowl);
+        if (currentHowl) {
+          currentHowl.mute(track.muted);
+        }
 
-        const howl = new Howl({
-          src: [`/media/${track.audio}`],
-          loop: true,
+        break;
+      }
+
+      case ActionType.Play: {
+        const playSlot = (slot: TrackState, slotIdx: number) => {
+          const track = state.tracks[slot.trackIdx];
+
+          const howl = new Howl({
+            src: [`/media/${track.audio}`],
+            loop: false,
+            onload: () => {
+              console.log(`Howl ${slotIdx} loaded`);
+            },
+            onloaderror: () => {
+              console.log(`Howl ${slotIdx} could not be loaded`);
+
+              if (howls[slotIdx] === howl) {
+                delete howls[slotIdx];
+              }
+
+              store.dispatch(shuffle({ slot: slotIdx }));
+              if (store.getState().isPlaying) {
+                store.dispatch(play({ slot: slotIdx }));
+              }
+            },
+            onplay: () => {
+              console.log(`Howl ${slotIdx} started`);
+            },
+            onpause: () => {
+              console.log(`Howl ${slotIdx} paused`);
+            },
+            onmute: () => {
+              console.log(`Howl ${slotIdx} (un)muted`);
+            },
+            onstop: () => {
+              console.log(`Howl ${slotIdx} stopped`);
+
+              if (howls[slotIdx] === howl) {
+                delete howls[slotIdx];
+              }
+            },
+            onend: () => {
+              console.log(`Howl ${slotIdx} ended`);
+
+              if (howls[slotIdx] === howl) {
+                delete howls[slotIdx];
+              }
+
+              store.dispatch(shuffle({ slot: slotIdx }));
+              if (store.getState().isPlaying) {
+                store.dispatch(play({ slot: slotIdx }));
+              }
+            },
+          });
+
+          if (howls[slotIdx] && howls[slotIdx] !== howl) {
+            howls[slotIdx].stop();
+          }
+          howls[slotIdx] = howl;
+
+          howl.play();
+          console.log(
+            `play ${slotIdx} (muted=${state.currentSlots[slotIdx].muted})`
+          );
+          howl.mute(state.currentSlots[slotIdx].muted);
+        };
+
+        if (action.slot != null) {
+          playSlot(state.currentSlots[action.slot], action.slot);
+        } else {
+          state.currentSlots.forEach(playSlot);
+        }
+
+        break;
+      }
+
+      case ActionType.Stop: {
+        howls.forEach((howl, index) => {
+          if (howl) {
+            howl.stop();
+            delete howls[index];
+          }
         });
 
-        howls[index] = howl;
-
-        howl.play();
-        if (state.currentSlots[index].isPaused) {
-          howl.pause();
-        }
-      };
-
-      if (action.trackSlot != null) {
-        playSlot(state.currentSlots[action.trackSlot], action.trackSlot);
-      } else {
-        state.currentSlots.forEach(playSlot);
-      }
-
-      break;
-    }
-    case ActionType.Stop: {
-      howls.forEach((howl) => {
-        howl.stop();
-      });
-      howls = [];
-
-      break;
-    }
-    case ActionType.Pause: {
-      if (!state.isPlaying) {
         break;
       }
-
-      const { trackSlot } = action;
-      const howl = howls[trackSlot];
-      if (howl) {
-        howl.pause();
-      }
-
-      break;
     }
-    case ActionType.Resume: {
-      if (!state.isPlaying) {
-        break;
-      }
+  };
 
-      const { trackSlot } = action;
-      const howl = howls[trackSlot];
-      if (howl) {
-        howl.play();
-      }
-
-      break;
-    }
-  }
+  return soundMiddleware;
 };
 
-export default soundMiddleware;
+export default createSoundMiddleware;

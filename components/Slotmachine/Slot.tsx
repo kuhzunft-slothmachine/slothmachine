@@ -25,7 +25,7 @@ const Slot = ({ slotIdx, className }: SlotProps) => {
       target={trackIdx}
       times={5}
       className={classNames(classes.block, className, {
-        [classes.muted]: slot.isPaused,
+        [classes.muted]: slot.muted,
       })}
     >
       {tracks.map((track) => {

@@ -6,7 +6,7 @@ export interface EnhancedSlot {
   trackIdx: number;
   track: Track;
   artist: Artist;
-  isPaused: boolean;
+  muted: boolean;
 }
 
 const useCurrentSlots = () =>

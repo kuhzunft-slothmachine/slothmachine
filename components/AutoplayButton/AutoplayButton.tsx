@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 
-import { ActionType, State } from "../../store/types";
+import { State } from "../../store/types";
+import { toggleAutoplay } from "../../store/actions";
 
 import classes from "./AutoplayButton.module.scss";
 
@@ -13,7 +14,7 @@ const AutoplayButton = () => {
       <div className={classes.label}>AUTO PLAY</div>
       <button
         onClick={() => {
-          dispatch({ type: ActionType.ToggleAutoplay });
+          dispatch(toggleAutoplay());
         }}
       >
         <img

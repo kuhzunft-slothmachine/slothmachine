@@ -1,22 +1,35 @@
 import { useMemo } from "react";
 import { createStore, applyMiddleware, Store } from "redux";
+import { Howl } from "howler";
 
 import { State } from "./types";
 import reducer from "./reducer";
-import soundMiddleware from './soundMiddleware';
+
+import soundMiddleware from "./soundMiddleware";
+import autoplayMiddleware from "./autoplayMiddleware";
+import logMiddleware from "./logMiddleware";
 
 let store: Store;
+const howls: Howl[] = [];
 
 const initialState = {
   isPlaying: false,
   isAutoplaying: false,
 
   artistsById: {},
-  tracks: []
+  tracks: [],
 };
 
 const initStore = (preloadedState: State = initialState) => {
-  return createStore(reducer, preloadedState, applyMiddleware(soundMiddleware));
+  return createStore(
+    reducer,
+    preloadedState,
+    applyMiddleware(
+      logMiddleware(howls),
+      autoplayMiddleware,
+      soundMiddleware(howls)
+    )
+  );
 };
 
 export const initializeStore = (preloadedState: State) => {
