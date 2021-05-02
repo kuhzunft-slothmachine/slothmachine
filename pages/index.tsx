@@ -1,14 +1,17 @@
 import { promises as fs } from "fs";
 import path from "path";
-
-import Link from "next/link";
+import { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
+
+import classNames from "classnames";
 
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Slotmachine from "../components/Slotmachine";
 import StartButton from "../components/StartButton";
 import AutoplayButton from "../components/AutoplayButton";
+
+import About from "../components/About";
 
 import useJoystick from "../hooks/useJoystick";
 import useTimeout from "../hooks/useTimeout";
@@ -19,9 +22,24 @@ import { shuffle } from "../store/actions";
 import classes from "./index.module.scss";
 
 export default function Home() {
+  const aboutScrollContainerRef = useRef<HTMLDivElement>();
+  const [showAbout, setShowAbout] = useState(false);
   const dispatch = useDispatch();
 
-  useJoystick();
+  useJoystick({
+    showAbout: () => showAbout,
+    toggleAbout: () => setShowAbout((currentShowAbout) => !currentShowAbout),
+    scrollAboutUp: () => {
+      if (aboutScrollContainerRef.current) {
+        aboutScrollContainerRef.current.scrollTop -= 100;
+      }
+    },
+    scrollAboutDown: () => {
+      if (aboutScrollContainerRef.current) {
+        aboutScrollContainerRef.current.scrollTop += 100;
+      }
+    },
+  });
   useTimeout(() => {
     dispatch(shuffle());
   }, 1000);
@@ -31,7 +49,19 @@ export default function Home() {
       <Header />
 
       <Main>
-        <div className={classes.content}>
+        <div
+          ref={aboutScrollContainerRef}
+          className={classNames(classes.about, {
+            [classes.showAbout]: showAbout,
+          })}
+        >
+          <About />
+        </div>
+        <div
+          className={classNames(classes.content, {
+            [classes.showAbout]: showAbout,
+          })}
+        >
           <div className={classes.sidebar}>
             <img src="/media/images/arrow-left.png" alt="Play..." />
             <a className={classes.donation} href="https://paypal.me/kuhzunft">
@@ -47,10 +77,15 @@ export default function Home() {
           </div>
         </div>
         <div className={classes.footer}>
-          <Link href="/about">
-            <a className={classes.footerLink}>ABOUT</a>
-          </Link>
-          <StartButton />
+          <a
+            className={classes.footerLink}
+            onClick={() => {
+              setShowAbout((currentAbout) => !currentAbout);
+            }}
+          >
+            {showAbout ? "BACK" : "ABOUT"}
+          </a>
+          {showAbout ? <></> : <StartButton />}
         </div>
       </Main>
     </div>

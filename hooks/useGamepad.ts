@@ -8,6 +8,17 @@ const useGamepad = (callbacks: {
   const buttonsPressed = useRef([]);
   const axesPressed = useRef([]);
 
+  const onButtonPressedRef = useRef(callbacks.onButtonPressed);
+  const onAxisPressedRef = useRef(callbacks.onAxisPressed);
+
+  useEffect(
+    () => {
+      onButtonPressedRef.current = callbacks.onButtonPressed;
+      onAxisPressedRef.current = callbacks.onAxisPressed;
+    },
+    [callbacks.onButtonPressed, callbacks.onAxisPressed]
+  );
+
   useEffect(() => {
     const gamepadConnected = (e: GamepadEvent) => {
       console.log(
@@ -49,7 +60,7 @@ const useGamepad = (callbacks: {
         if (currentGamepad) {
           currentGamepad.buttons.forEach((button, index) => {
             if (button.pressed && !buttonsPressed.current[index]) {
-              callbacks.onButtonPressed(index);
+              onButtonPressedRef.current(index);
               buttonsPressed.current[index] = true;
             }
 
@@ -62,16 +73,16 @@ const useGamepad = (callbacks: {
 
             if (pressed && !axesPressed.current[index]) {
               if (index === 1 && axes === -1) {
-                callbacks.onAxisPressed("up");
+                onAxisPressedRef.current("up");
               }
               if (index === 1 && axes === 1) {
-                callbacks.onAxisPressed("down");
+                onAxisPressedRef.current("down");
               }
               if (index === 0 && axes === -1) {
-                callbacks.onAxisPressed("left");
+                onAxisPressedRef.current("left");
               }
               if (index === 0 && axes === 1) {
-                callbacks.onAxisPressed("right");
+                onAxisPressedRef.current("right");
               }
 
               axesPressed.current[index] = true;
