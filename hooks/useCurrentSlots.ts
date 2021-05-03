@@ -5,7 +5,7 @@ import { Artist, State, Track } from "../store/types";
 export interface EnhancedSlot {
   trackIdx: number;
   track: Track;
-  artist: Artist;
+  artist?: Artist;
   muted: boolean;
 }
 
@@ -19,7 +19,7 @@ const useCurrentSlots = () =>
         ...slot,
         trackIdx: slot.trackIdx,
         track,
-        artist,
+        artist: artist || { name: track.artist_id },
       };
     });
 

@@ -8,7 +8,7 @@ import classes from "./ArtistLabel.module.scss";
 
 interface ArtistLabelProps {
   artist: string;
-  instruments: string;
+  instruments?: string;
   slot: number;
 }
 
@@ -22,7 +22,7 @@ const ArtistLabel = ({ artist, instruments, slot }: ArtistLabelProps) => {
     (state) => [state.selectedSlotIdx != null, state.selectedSlotIdx === slot]
   );
 
-  const label = `${artist} - ${instruments}`;
+  const label = instruments ? `${artist} - ${instruments}` : artist;
 
   const onShuffle = () => {
     dispatch(shuffle({ slot }));
