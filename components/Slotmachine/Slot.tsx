@@ -33,11 +33,13 @@ const Slot = ({ slotIdx, className }: SlotProps) => {
     >
       {tracks.map((track) => {
         return (
-          <img
+          <div
             className={classes.image}
             key={track.photo}
-            src={`/media/${currentVersion}/cover/${track.photo}`}
-            alt={`Picture of the ${track.title}`}
+            style={{
+              backgroundImage: `url(/media/${currentVersion}/cover/${track.photo})`
+            }}
+            aria-label={`Picture of the ${track.title}`}
           />
         );
       })}
