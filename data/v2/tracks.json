@@ -1,332 +1,332 @@
 {
   "1": {
-    "title": "E-Werk.mp3",
+    "title": "ELEKTRIZITÄTSWERK",
     "audio": "E-Werk.mp3",
-    "artist_id": "E-Werk",
+    "artist_id": "FIELD RECORDING",
     "photo": "E-Werk.JPG"
   },
   "2": {
-    "title": "Emscher-Hydrophone.mp3",
+    "title": "EMSCHER HYDROPHONE",
     "audio": "Emscher-Hydrophone.mp3",
-    "artist_id": "Emscher-Hydrophone",
+    "artist_id": "FIELD RECORDING",
     "photo": "Emscher-Hydrophone.JPG"
   },
   "3": {
-    "title": "Fussgangerbrucke-sound.mp3",
+    "title": "FUSSGÄNGERBRÜCKE",
     "audio": "Fussgangerbrucke-sound.mp3",
-    "artist_id": "Fussgangerbrucke-sound",
+    "artist_id": "FIELD RECORDING",
     "photo": "Fussgangerbrucke-sound.JPG"
   },
   "4": {
-    "title": "Gasometer.mp3",
+    "title": "GASOMETER",
     "audio": "Gasometer.mp3",
-    "artist_id": "Gasometer",
+    "artist_id": "FIELD RECORDING",
     "photo": "Gasometer.jpg"
   },
   "5": {
-    "title": "H-Bahn-Akustisch.mp3",
+    "title": "H-BAHN",
     "audio": "H-Bahn-Akustisch.mp3",
-    "artist_id": "H-Bahn-Akustisch",
+    "artist_id": "FIELD RECORDING",
     "photo": "H-Bahn-a.jpg"
   },
   "6": {
-    "title": "H-Bahn-Elektromagnetisch.mp3",
+    "title": "H-BAHN - ELEKTROMAGNETISCH",
     "audio": "H-Bahn-Elektromagnetisch.mp3",
-    "artist_id": "H-Bahn-Elektromagnetisch",
+    "artist_id": "FIELD RECORDING",
     "photo": "H-Bahn-e.jpg"
   },
   "7": {
-    "title": "Halfpipe-U-Piezo.mp3",
+    "title": "HALFPIPE PIEZO",
     "audio": "Halfpipe-U-Piezo.mp3",
-    "artist_id": "Halfpipe-U-Piezo",
+    "artist_id": "FIELD RECORDING",
     "photo": "halfpipe.JPG"
   },
   "8": {
-    "title": "Huelsenbeck-Grab-Gras-mono.mp3",
+    "title": "HÜLSENBECK-GRAB",
     "audio": "Huelsenbeck-Grab-Gras-mono.mp3",
-    "artist_id": "Huelsenbeck-Grab-Gras-mono",
+    "artist_id": "FIELD RECORDING",
     "photo": "huelsenbeck.JPG"
   },
   "9": {
-    "title": "Phoenixsee-Bootwimpel.mp3",
+    "title": "PHOENIX-SEE BOOTE",
     "audio": "Phoenixsee-Bootwimpel.mp3",
-    "artist_id": "Phoenixsee-Bootwimpel",
+    "artist_id": "FIELD RECORDING",
     "photo": "Phoenix-See-Boote.JPG"
   },
   "10": {
-    "title": "Phoenixsee-Radrunde.mp3",
+    "title": "PHOENIX-SEE PER RAD",
     "audio": "Phoenixsee-Radrunde.mp3",
-    "artist_id": "Phoenixsee-Radrunde",
+    "artist_id": "FIELD RECORDING",
     "photo": "phoenixsee-radrunde.JPG"
   },
   "11": {
-    "title": "Reinoldikirche+Klavier.mp3",
+    "title": "REINOLDIKIRCHE MIT KLAVIER",
     "audio": "Reinoldikirche+Klavier.mp3",
-    "artist_id": "Reinoldikirche+Klavier",
+    "artist_id": "FIELD RECORDING",
     "photo": "reinoldikirche+klavier.JPG"
   },
   "12": {
-    "title": "Reinoldikirche.mp3",
+    "title": "REINOLDIKIRCHE",
     "audio": "Reinoldikirche.mp3",
-    "artist_id": "Reinoldikirche",
+    "artist_id": "FIELD RECORDING",
     "photo": "Reinoldikirche.jpg"
   },
   "13": {
-    "title": "Rombergpark-Tunnel.mp3",
+    "title": "ROMBERGPARK TUNNEL",
     "audio": "Rombergpark-Tunnel.mp3",
-    "artist_id": "Rombergpark-Tunnel",
+    "artist_id": "FIELD RECORDING",
     "photo": "Rombergpark-Tunnel.JPG"
   },
   "14": {
-    "title": "Schnecken.mp3",
+    "title": "SCHNECKEN",
     "audio": "Schnecken.mp3",
-    "artist_id": "Schnecken",
+    "artist_id": "FIELD RECORDING",
     "photo": "schnecken.jpg"
   },
   "15": {
-    "title": "Schnettkerbrucke-oben.mp3",
+    "title": "SCHNETTKERBRÜCKE - OBEN",
     "audio": "Schnettkerbrucke-oben.mp3",
-    "artist_id": "Schnettkerbrucke-oben",
+    "artist_id": "FIELD RECORDING",
     "photo": "schnettkerbrucke-oben.JPG"
   },
   "16": {
-    "title": "Schnettkerbrucke-unterhalb.mp3",
+    "title": "SCHNETTKERBRÜCKE - UNTEN",
     "audio": "Schnettkerbrucke-unterhalb.mp3",
-    "artist_id": "Schnettkerbrucke-unterhalb",
+    "artist_id": "FIELD RECORDING",
     "photo": "schnettkerbrucke-unten.JPG"
   },
   "17": {
-    "title": "Stadion-Geisterspiel.mp3",
+    "title": "STADION - GEISTERSPIEL",
     "audio": "Stadion-Geisterspiel.mp3",
-    "artist_id": "Stadion-Geisterspiel",
+    "artist_id": "FIELD RECORDING",
     "photo": "Stadion-geisterspiel.jpg"
   },
   "18": {
-    "title": "U-Bahn-Akustisch.mp3",
+    "title": "U-BAHN",
     "audio": "U-Bahn-Akustisch.mp3",
-    "artist_id": "U-Bahn-Akustisch",
+    "artist_id": "FIELD RECORDING",
     "photo": "u-bahn-akustisch.JPG"
   },
   "19": {
-    "title": "U-Bahn-Elektromagnetisch.mp3",
+    "title": "U-BAHN - ELEKTROMAGNETISCH",
     "audio": "U-Bahn-Elektromagnetisch.mp3",
-    "artist_id": "U-Bahn-Elektromagnetisch",
+    "artist_id": "FIELD RECORDING",
     "photo": "u-bahn-elektromagnetisch.JPG"
   },
   "20": {
-    "title": "U-Treppenhaus.mp3",
+    "title": "TREPPENHAUS - U",
     "audio": "U-Treppenhaus.mp3",
-    "artist_id": "U-Treppenhaus",
+    "artist_id": "FIELD RECORDING",
     "photo": "U-treppenhaus.JPG"
   },
   "21": {
-    "title": "Westpark-Spielplatz.mp3",
+    "title": "WESTPARK - SPIELPLATZ",
     "audio": "Westpark-Spielplatz.mp3",
-    "artist_id": "Westpark-Spielplatz",
+    "artist_id": "FIELD RECORDING",
     "photo": "westpark-spielplatz.JPG"
   },
   "22": {
-    "title": "Witze.mp3",
+    "title": "WITZE",
     "audio": "Witze.mp3",
-    "artist_id": "Witze",
+    "artist_id": "FIELD RECORDING",
     "photo": "Witze.JPG"
   },
   "23": {
-    "title": "Witzeautomat.mp3",
+    "title": "WITZEAUTOMAT",
     "audio": "Witzeautomat.mp3",
-    "artist_id": "Witzeautomat",
+    "artist_id": "FIELD RECORDING",
     "photo": "Witzeautomat.JPG"
   },
   "24": {
-    "title": "Zoo.mp3",
+    "title": "ZOO",
     "audio": "Zoo.mp3",
-    "artist_id": "Zoo",
+    "artist_id": "FIELD RECORDING",
     "photo": "Zoo.JPG"
   },
   "25": {
-    "title": "berimbao.mp3",
+    "title": "BERIMBAO",
     "audio": "berimbao.mp3",
-    "artist_id": "berimbao",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Berimbao.jpg"
   },
   "26": {
-    "title": "claps.mp3",
+    "title": "CLAPS",
     "audio": "claps.mp3",
-    "artist_id": "claps",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "claps.JPG"
   },
   "27": {
-    "title": "dan-moi.mp3",
+    "title": "DAN-MOI",
     "audio": "dan-moi.mp3",
-    "artist_id": "dan-moi",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Dan_Moi.jpg"
   },
   "28": {
-    "title": "dundun.mp3",
+    "title": "DUNDUN",
     "audio": "dundun.mp3",
-    "artist_id": "dundun",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Dundun.jpg"
   },
   "29": {
-    "title": "emscher-text.mp3",
+    "title": "EMSCHER",
     "audio": "emscher-text.mp3",
-    "artist_id": "emscher-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "Emscher-text.JPG"
   },
   "30": {
-    "title": "fussgangerbrucke-text.mp3",
+    "title": "FUSSGÄNGERBRÜCKE",
     "audio": "fussgangerbrucke-text.mp3",
-    "artist_id": "fussgangerbrucke-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "fussgangerbrucke-text.JPG"
   },
   "31": {
-    "title": "gasometer-text.mp3",
+    "title": "GASOMETER",
     "audio": "gasometer-text.mp3",
-    "artist_id": "gasometer-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "gasometer-text.JPG"
   },
   "32": {
-    "title": "ghatam.mp3",
+    "title": "GHATAM",
     "audio": "ghatam.mp3",
-    "artist_id": "ghatam",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Ghatam.jpg"
   },
   "33": {
-    "title": "gong.mp3",
+    "title": "GONG",
     "audio": "gong.mp3",
-    "artist_id": "gong",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Gong.jpg"
   },
   "34": {
-    "title": "halfpipe-text.mp3",
+    "title": "HALFPIPE",
     "audio": "halfpipe-text.mp3",
-    "artist_id": "halfpipe-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "halfpipe-text.JPG"
   },
   "35": {
-    "title": "mbira.mp3",
+    "title": "MBIRA",
     "audio": "mbira.mp3",
-    "artist_id": "mbira",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Mbira.jpg"
   },
   "36": {
-    "title": "occarina.mp3",
+    "title": "OCCARINA",
     "audio": "occarina.mp3",
-    "artist_id": "occarina",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Occarina.jpg"
   },
   "37": {
-    "title": "phoenix-see-text.mp3",
+    "title": "PHOENIX-SEE",
     "audio": "phoenix-see-text.mp3",
-    "artist_id": "phoenix-see-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "Phoenix-See-text.JPG"
   },
   "38": {
-    "title": "regenauffangbecken-text.mp3",
+    "title": "REGENAUFFANGBECKEN",
     "audio": "regenauffangbecken-text.mp3",
-    "artist_id": "regenauffangbecken-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "regenauffangbecken-text.JPG"
   },
   "39": {
-    "title": "regenauffangbecken.mp3",
+    "title": "REGENAUFFANGBECKEN",
     "audio": "regenauffangbecken.mp3",
-    "artist_id": "regenauffangbecken",
+    "artist_id": "FIELD RECORDING",
     "photo": "regenauffangbecken.JPG"
   },
   "40": {
-    "title": "reinoldikirche-text.mp3",
+    "title": "REINOLDIKIRCHE",
     "audio": "reinoldikirche-text.mp3",
-    "artist_id": "reinoldikirche-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "Reinoldikirche-text.jpg"
   },
   "41": {
-    "title": "schnecken-text.mp3",
+    "title": "SCHNECKEN",
     "audio": "schnecken-text.mp3",
-    "artist_id": "schnecken-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "schnecken-text.jpg"
   },
   "42": {
-    "title": "shruti.mp3",
+    "title": "SHRUTI",
     "audio": "shruti.mp3",
-    "artist_id": "shruti",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Shruti.jpg"
   },
   "43": {
-    "title": "stadion-text.mp3",
+    "title": "STADION",
     "audio": "stadion-text.mp3",
-    "artist_id": "stadion-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "stadion_text.JPG"
   },
   "44": {
-    "title": "takelage-text.mp3",
+    "title": "TAKELAGE",
     "audio": "takelage-text.mp3",
-    "artist_id": "takelage-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "takelage-text.JPG"
   },
   "45": {
-    "title": "tunnel-text.mp3",
+    "title": "TUNNEL",
     "audio": "tunnel-text.mp3",
-    "artist_id": "tunnel-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "tunnel-text.JPG"
   },
   "46": {
-    "title": "u-bahn-text.mp3",
+    "title": "U-BAHN",
     "audio": "u-bahn-text.mp3",
-    "artist_id": "u-bahn-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "u-bahn-text.JPG"
   },
   "47": {
-    "title": "u-treppenhaus-text.mp3",
+    "title": "TREPPENHAUS AM U",
     "audio": "u-treppenhaus-text.mp3",
-    "artist_id": "u-treppenhaus-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "U-Treppenhaus-text.JPG"
   },
   "48": {
-    "title": "udu.mp3",
+    "title": "UDU",
     "audio": "udu.mp3",
-    "artist_id": "udu",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Udu.jpg"
   },
   "49": {
-    "title": "waterdrum.mp3",
+    "title": "WATERDRUM",
     "audio": "waterdrum.mp3",
-    "artist_id": "waterdrum",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Waterdrum.jpg"
   },
   "50": {
-    "title": "westfriedhof-text.mp3",
+    "title": "WESTFRIEDHOF",
     "audio": "westfriedhof-text.mp3",
-    "artist_id": "westfriedhof-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "westfriedhof-text.JPG"
   },
   "51": {
-    "title": "westpark-spielplatz-text.mp3",
+    "title": "WESTPARK SPIELPLATZ",
     "audio": "westpark-spielplatz-text.mp3",
-    "artist_id": "westpark-spielplatz-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "westpark-spielplatz-text.JPG"
   },
   "52": {
-    "title": "witzeautomat-text.mp3",
+    "title": "WITZEAUTOMAT",
     "audio": "witzeautomat-text.mp3",
-    "artist_id": "witzeautomat-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "witzeautomat-text.JPG"
   },
   "53": {
-    "title": "woodslitdrum.mp3",
+    "title": "WOODSLIT DRUM",
     "audio": "woodslitdrum.mp3",
-    "artist_id": "woodslitdrum",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Woodslitdrum.jpg"
   },
   "54": {
-    "title": "zither.mp3",
+    "title": "ZITHER",
     "audio": "zither.mp3",
-    "artist_id": "zither",
+    "artist_id": "TRADITIONAL INSTRUMENT",
     "photo": "Zither.jpg"
   },
   "55": {
-    "title": "zoo-text.mp3",
+    "title": "ZOO",
     "audio": "zoo-text.mp3",
-    "artist_id": "zoo-text",
+    "artist_id": "BRANDSTIFTER TEXT",
     "photo": "zoo-text.JPG"
   }
 }
