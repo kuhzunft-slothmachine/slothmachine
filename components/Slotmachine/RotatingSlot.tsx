@@ -65,6 +65,7 @@ const RotatingSlot = ({
     const tick = () => {
       const elapsed = Date.now() - startTime;
       if (elapsed > duration) {
+      	$frame.scrollTop = targetOffset;
         onEnd();
         return;
       }

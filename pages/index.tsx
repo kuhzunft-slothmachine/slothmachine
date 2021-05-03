@@ -44,7 +44,7 @@ export default function Home() {
   });
   useTimeout(() => {
     dispatch(shuffle());
-  }, 1000);
+  }, 3000);
 
   return (
     <div className={classes.block}>
