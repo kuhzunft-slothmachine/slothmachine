@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 
 import classNames from "classnames";
 
+import { getCurrentVersion } from "../utils/version";
+
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Slotmachine from "../components/Slotmachine";
@@ -93,13 +95,15 @@ export default function Home() {
 }
 
 export async function getStaticProps() {
+  const currentVersion = getCurrentVersion();
+
   const artistsByIdJson = await fs.readFile(
-    path.join(process.cwd(), "data/artists.json"),
+    path.join(process.cwd(), `data/${currentVersion}/artists.json`),
     "utf8"
   );
   const artistsById = JSON.parse(artistsByIdJson);
   const tracksByIdJson = await fs.readFile(
-    path.join(process.cwd(), "data/tracks.json"),
+    path.join(process.cwd(), `data/${currentVersion}/tracks.json`),
     "utf8"
   );
   const tracksById = JSON.parse(tracksByIdJson);

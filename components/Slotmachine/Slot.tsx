@@ -8,6 +8,7 @@ import useSlot from "../../hooks/useSlot";
 
 import classes from "./Slot.module.scss";
 import { State, Track } from "../../store/types";
+import { getCurrentVersion } from "../../utils/version";
 
 interface SlotProps {
   slotIdx: number;
@@ -15,6 +16,8 @@ interface SlotProps {
 }
 
 const Slot = ({ slotIdx, className }: SlotProps) => {
+  const currentVersion = getCurrentVersion();
+
   const slot = useSlot(slotIdx);
   const { trackIdx } = slot;
 
@@ -33,7 +36,7 @@ const Slot = ({ slotIdx, className }: SlotProps) => {
           <img
             className={classes.image}
             key={track.photo}
-            src={`/media/${track.photo}`}
+            src={`/media/${currentVersion}/cover/${track.photo}`}
             alt={`Picture of the ${track.title}`}
           />
         );
