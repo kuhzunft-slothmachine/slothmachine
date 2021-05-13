@@ -1,4 +1,5 @@
 import { useStore, useDispatch } from "react-redux";
+import throttle from "lodash.throttle";
 
 import {
   select,
@@ -11,6 +12,8 @@ import {
 import useKeyboardShortcut from "./useKeyboardShortcut";
 import useGamepad from "./useGamepad";
 
+const THROTTLE_WAIT = 400;
+
 const useJoystick = (options: {
   showAbout: () => boolean;
   toggleAbout: () => void;
@@ -20,50 +23,50 @@ const useJoystick = (options: {
   const dispatch = useDispatch();
   const store = useStore();
 
-  const clearSelectionMode = () => {
+  const clearSelectionMode = throttle(() => {
     if (options && options.showAbout()) {
     } else {
       dispatch(select({ direction: "clear" }));
     }
-  };
-  const selectLeft = () => {
+  }, THROTTLE_WAIT);
+  const selectLeft = throttle(() => {
     if (options && options.showAbout()) {
     } else {
       dispatch(select({ direction: "left" }));
     }
-  };
-  const selectRight = () => {
+  }, THROTTLE_WAIT);
+  const selectRight = throttle(() => {
     if (options && options.showAbout()) {
     } else {
       dispatch(select({ direction: "right" }));
     }
-  };
+  }, THROTTLE_WAIT);
 
-  const onShuffle = () => {
+  const onShuffle = throttle(() => {
     const state = store.getState();
     const { selectedSlotIdx } = state;
     if (selectedSlotIdx != null) {
       dispatch(shuffle({ slot: selectedSlotIdx }));
     }
-  };
+  }, THROTTLE_WAIT);
 
-  const handleUp = () => {
+  const handleUp = throttle(() => {
     if (options && options.showAbout()) {
       options.scrollAboutUp();
     } else {
       onShuffle();
     }
-  };
+  }, THROTTLE_WAIT);
 
-  const handleDown = () => {
+  const handleDown = throttle(() => {
     if (options && options.showAbout()) {
       options.scrollAboutDown();
     } else {
       onShuffle();
     }
-  };
+  }, THROTTLE_WAIT);
 
-  const handleToggleMute = () => {
+  const handleToggleMute = throttle(() => {
     if (options && options.showAbout()) {
     } else {
       const state = store.getState();
@@ -73,15 +76,15 @@ const useJoystick = (options: {
         dispatch(toggleMute({ slot: selectedSlotIdx }));
       }
     }
-  };
+  }, THROTTLE_WAIT);
 
-  const handleToggleAutoplay = () => {
+  const handleToggleAutoplay = throttle(() => {
     dispatch(toggleAutoplay());
-  };
+  }, THROTTLE_WAIT);
 
-  const handleTogglePlay = () => {
+  const handleTogglePlay = throttle(() => {
     dispatch(togglePlay());
-  };
+  }, THROTTLE_WAIT);
 
   useGamepad({
     onButtonPressed: (index) => {
