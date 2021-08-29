@@ -67,14 +67,18 @@ const useJoystick = (options: {
     }
   }, THROTTLE_WAIT);
 
-  const handleToggleMute = throttle(() => {
+  const handleToggleMute = throttle((slotIdx?: number) => {
     if (options && options.showAbout()) {
     } else {
-      const state = store.getState();
-      const { selectedSlotIdx } = state;
+      if (slotIdx != null) {
+        dispatch(toggleMute({ slot: slotIdx }));
+      } else {
+        const state = store.getState();
+        const { selectedSlotIdx } = state;
 
-      if (selectedSlotIdx != null) {
-        dispatch(toggleMute({ slot: selectedSlotIdx }));
+        if (selectedSlotIdx != null) {
+          dispatch(toggleMute({ slot: selectedSlotIdx }));
+        }
       }
     }
   }, THROTTLE_WAIT);
@@ -99,13 +103,21 @@ const useJoystick = (options: {
           break;
         }
         case 2: {
-          handleToggleMute();
-          break;
-        }
-        case 3: {
           if (options && options.toggleAbout) {
             options.toggleAbout();
           }
+          break;
+        }
+        case 3: {
+          handleToggleMute(0);
+          break;
+        }
+        case 4: {
+          handleToggleMute(1);
+          break;
+        }
+        case 5: {
+          handleToggleMute(2);
           break;
         }
       }
