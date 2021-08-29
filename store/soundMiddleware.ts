@@ -1,8 +1,6 @@
 import { Middleware } from "redux";
 import { Howl } from "howler";
 
-import { getCurrentVersion } from "../utils/version";
-
 import { State, TrackState } from "./types";
 import { Action, ActionType, play, shuffle, stop } from "./actions";
 
@@ -55,7 +53,7 @@ const createSoundMiddleware = (howls: Howl[]) => {
 
       case ActionType.Play: {
         const playSlot = (slot: TrackState, slotIdx: number) => {
-          const currentVersion = getCurrentVersion();
+          const currentVersion = state.version;
           const track = state.tracks[slot.trackIdx];
 
           const howl = new Howl({

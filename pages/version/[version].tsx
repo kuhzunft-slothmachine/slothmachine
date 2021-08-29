@@ -1,3 +1,4 @@
+import { GetStaticPropsContext } from "next";
 import { promises as fs } from "fs";
 import path from "path";
 import { useState, useRef } from "react";
@@ -5,23 +6,21 @@ import { useDispatch } from "react-redux";
 
 import classNames from "classnames";
 
-import { getCurrentVersion } from "../utils/version";
+import Header from "../../components/Header";
+import Main from "../../components/Main";
+import Slotmachine from "../../components/Slotmachine";
+import StartButton from "../../components/StartButton";
+import AutoplayButton from "../../components/AutoplayButton";
 
-import Header from "../components/Header";
-import Main from "../components/Main";
-import Slotmachine from "../components/Slotmachine";
-import StartButton from "../components/StartButton";
-import AutoplayButton from "../components/AutoplayButton";
+import About from "../../components/About";
 
-import About from "../components/About";
+import useJoystick from "../../hooks/useJoystick";
+import useTimeout from "../../hooks/useTimeout";
 
-import useJoystick from "../hooks/useJoystick";
-import useTimeout from "../hooks/useTimeout";
+import { State, Track } from "../../store/types";
+import { shuffle } from "../../store/actions";
 
-import { State, Track } from "../store/types";
-import { shuffle } from "../store/actions";
-
-import classes from "./index.module.scss";
+import classes from "../index.module.scss";
 
 export default function Home() {
   const aboutScrollContainerRef = useRef<HTMLDivElement>();
@@ -35,7 +34,7 @@ export default function Home() {
         setShake(true);
         setTimeout(() => {
           setShake(false);
-        }, 1000)
+        }, 1000);
       }
     },
     showAbout: () => showAbout,
@@ -55,7 +54,6 @@ export default function Home() {
   useTimeout(() => {
     dispatch(shuffle());
   }, 3000);
-  
 
   return (
     <div
@@ -109,8 +107,8 @@ export default function Home() {
   );
 }
 
-export async function getStaticProps() {
-  const currentVersion = getCurrentVersion();
+export async function getStaticProps(context: GetStaticPropsContext) {
+  const currentVersion = `v${context.params.version}`;
 
   const artistsByIdJson = await fs.readFile(
     path.join(process.cwd(), `data/${currentVersion}/artists.json`),
@@ -125,6 +123,8 @@ export async function getStaticProps() {
   const tracks: Track[] = Object.values(tracksById);
 
   const initialReduxState: State = {
+    version: currentVersion,
+
     isPlaying: false,
     isAutoplaying: false,
 
@@ -142,5 +142,12 @@ export async function getStaticProps() {
     props: {
       initialReduxState,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { version: "1" } }, { params: { version: "2" } }],
+    fallback: false,
   };
 }

@@ -13,6 +13,7 @@ let store: Store;
 const howls: Howl[] = [];
 
 const initialState = {
+  version: 'v2',
   isPlaying: false,
   isAutoplaying: false,
 

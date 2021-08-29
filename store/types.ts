@@ -18,6 +18,8 @@ export interface TrackState {
 export type CurrentSlots = [TrackState, TrackState, TrackState];
 
 export interface State {
+  version: string;
+
   isAutoplaying: boolean;
   isPlaying: boolean;
 

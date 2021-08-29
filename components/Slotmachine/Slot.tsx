@@ -8,7 +8,6 @@ import useSlot from "../../hooks/useSlot";
 
 import classes from "./Slot.module.scss";
 import { State, Track } from "../../store/types";
-import { getCurrentVersion } from "../../utils/version";
 
 interface SlotProps {
   slotIdx: number;
@@ -16,12 +15,11 @@ interface SlotProps {
 }
 
 const Slot = ({ slotIdx, className }: SlotProps) => {
-  const currentVersion = getCurrentVersion();
-
   const slot = useSlot(slotIdx);
   const { trackIdx } = slot;
 
   const tracks = useSelector<State, Track[]>((state) => state.tracks);
+  const currentVersion = useSelector<State, string>((state) => state.version);
 
   return (
     <RotatingSlot
@@ -37,7 +35,9 @@ const Slot = ({ slotIdx, className }: SlotProps) => {
             className={classes.image}
             key={track.photo}
             style={{
-              backgroundImage: `url(/media/${currentVersion}/cover/${track.photo})`
+              backgroundImage: `url(/media/${currentVersion}/cover/${
+                track.photo
+              })`,
             }}
             aria-label={`Picture of the ${track.title}`}
           />
