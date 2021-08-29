@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+
 import { useStore, useDispatch } from "react-redux";
 import throttle from "lodash.throttle";
 
@@ -7,10 +9,12 @@ import {
   toggleAutoplay,
   toggleMute,
   togglePlay,
+  stop,
 } from "../store/actions";
 
 import useKeyboardShortcut from "./useKeyboardShortcut";
 import useGamepad from "./useGamepad";
+import { State } from "../store/types";
 
 const THROTTLE_WAIT = 400;
 
@@ -21,6 +25,7 @@ const useJoystick = (options: {
   scrollAboutUp: () => void;
   scrollAboutDown: () => void;
 }) => {
+  const router = useRouter();
   const dispatch = useDispatch();
   const store = useStore();
 
@@ -44,7 +49,7 @@ const useJoystick = (options: {
   }, THROTTLE_WAIT);
 
   const onShuffle = throttle(() => {
-    const state = store.getState();
+    const state: State = store.getState();
     const { selectedSlotIdx } = state;
     if (selectedSlotIdx != null) {
       dispatch(shuffle({ slot: selectedSlotIdx }));
@@ -73,13 +78,25 @@ const useJoystick = (options: {
       if (slotIdx != null) {
         dispatch(toggleMute({ slot: slotIdx }));
       } else {
-        const state = store.getState();
+        const state: State = store.getState();
         const { selectedSlotIdx } = state;
 
         if (selectedSlotIdx != null) {
           dispatch(toggleMute({ slot: selectedSlotIdx }));
         }
       }
+    }
+  }, THROTTLE_WAIT);
+
+  const handleSwitch = throttle(() => {
+    dispatch(stop());
+    const state: State = store.getState();
+    const currentVersion = state.version;
+    if (currentVersion === "v1") {
+      router.push("/version/2");
+    }
+    if (currentVersion === "v2") {
+      router.push("/version/1");
     }
   }, THROTTLE_WAIT);
 
@@ -116,6 +133,7 @@ const useJoystick = (options: {
         }
         case 4: {
           console.log('Not implemented yet: switch to old slotmachine');
+          // handleSwitch();
           break;
         }
         case 5: {
@@ -177,6 +195,7 @@ const useJoystick = (options: {
   useKeyboardShortcut(["a", "A"], handleToggleAutoplay);
 
   useKeyboardShortcut(["s", "S"], options.shake);
+  useKeyboardShortcut(["v", "V"], handleSwitch);
 
   useKeyboardShortcut(["space"], handleTogglePlay);
 };
