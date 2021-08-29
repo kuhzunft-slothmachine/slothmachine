@@ -1,13 +1,17 @@
-
 .block {
   display: flex;
   flex-direction: column;
 
   max-width: 1100px;
   width: 100%;
+
+  &.shake {
+    animation: shake 0.8s infinite alternate;
+  }
 }
 
-.content, .about {
+.content,
+.about {
   transition: all 0.2s ease-in-out;
 }
 
@@ -96,5 +100,32 @@
   &:hover {
     opacity: 1;
     transform: translate(0px, -1px);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate3d(-30px, 30px, 0) skewX(-5deg) rotate(3eg);
+    filter: invert(0);
+  }
+  5% {
+    transform: translate3d(10px, -10px, 0) skewX(5deg) rotate(-2deg);
+    filter: invert(0.5);
+  }
+  10% {
+    transform: translate3d(-5px, 5px, 0) skewX(-5deg) rotate(3deg);
+    filter: invert(0.8);
+  }
+  15% {
+    transform: translate3d(5px, -5px, 0) skewX(5deg) rotate(-2deg);
+    filter: invert(1);
+  }
+  20% {
+    transform: translate3d(0px, 0px, 0) skewX(0deg) rotate(0deg);
+    filter: invert(0.1);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) skewX(0deg) rotate(0deg);
+    filter: invert(0);
   }
 }

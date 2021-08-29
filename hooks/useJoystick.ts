@@ -15,6 +15,7 @@ import useGamepad from "./useGamepad";
 const THROTTLE_WAIT = 400;
 
 const useJoystick = (options: {
+  shake: () => void;
   showAbout: () => boolean;
   toggleAbout: () => void;
   scrollAboutUp: () => void;
@@ -138,8 +139,22 @@ const useJoystick = (options: {
   useKeyboardShortcut(["up"], handleUp);
   useKeyboardShortcut(["down"], handleDown);
 
-  useKeyboardShortcut(["m", "M"], handleToggleMute);
+  useKeyboardShortcut(["m", "M"], () => {
+    handleToggleMute();
+  });
+  useKeyboardShortcut(["q", "Q"], () => {
+    handleToggleMute(0);
+  });
+  useKeyboardShortcut(["w", "W"], () => {
+    handleToggleMute(1);
+  });
+  useKeyboardShortcut(["e", "E"], () => {
+    handleToggleMute(2);
+  });
+
   useKeyboardShortcut(["a", "A"], handleToggleAutoplay);
+
+  useKeyboardShortcut(["s", "S"], options.shake);
 
   useKeyboardShortcut(["space"], handleTogglePlay);
 };

@@ -26,9 +26,18 @@ import classes from "./index.module.scss";
 export default function Home() {
   const aboutScrollContainerRef = useRef<HTMLDivElement>();
   const [showAbout, setShowAbout] = useState(false);
+  const [shake, setShake] = useState(false);
   const dispatch = useDispatch();
 
   useJoystick({
+    shake: () => {
+      if (!shake) {
+        setShake(true);
+        setTimeout(() => {
+          setShake(false);
+        }, 1000)
+      }
+    },
     showAbout: () => showAbout,
     toggleAbout: () => setShowAbout((currentShowAbout) => !currentShowAbout),
     scrollAboutUp: () => {
@@ -42,12 +51,18 @@ export default function Home() {
       }
     },
   });
+
   useTimeout(() => {
     dispatch(shuffle());
   }, 3000);
+  
 
   return (
-    <div className={classes.block}>
+    <div
+      className={classNames(classes.block, {
+        [classes.shake]: shake,
+      })}
+    >
       <Header />
 
       <Main>
