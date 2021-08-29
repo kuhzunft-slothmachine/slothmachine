@@ -109,14 +109,24 @@ const useJoystick = (options: {
           break;
         }
         case 3: {
-          handleToggleMute(0);
+          if (options && options.shake) {
+            options.shake();
+          }
           break;
         }
         case 4: {
-          handleToggleMute(1);
+          console.log('Not implemented yet: switch to old slotmachine');
           break;
         }
         case 5: {
+          handleToggleMute(0);
+          break;
+        }
+        case 6: {
+          handleToggleMute(1);
+          break;
+        }
+        case 7: {
           handleToggleMute(2);
           break;
         }
