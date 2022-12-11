@@ -3,1650 +3,1925 @@
     "title": "ELEKTRIZITÄTSWERK",
     "audio": "E-Werk.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "E-Werk.JPG"
+    "photo": "E-Werk.JPG",
+    "version": "v2"
   },
   "v2:2": {
     "title": "EMSCHER HYDROPHONE",
     "audio": "Emscher-Hydrophone.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "Emscher-Hydrophone.JPG"
+    "photo": "Emscher-Hydrophone.JPG",
+    "version": "v2"
   },
   "v2:3": {
     "title": "FUSSGÄNGERBRÜCKE",
     "audio": "Fussgangerbrucke-sound.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "Fussgangerbrucke-sound.JPG"
+    "photo": "Fussgangerbrucke-sound.JPG",
+    "version": "v2"
   },
   "v2:4": {
     "title": "GASOMETER",
     "audio": "Gasometer.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "Gasometer.jpg"
+    "photo": "Gasometer.jpg",
+    "version": "v2"
   },
   "v2:5": {
     "title": "H-BAHN",
     "audio": "H-Bahn-Akustisch.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "H-Bahn-a.jpg"
+    "photo": "H-Bahn-a.jpg",
+    "version": "v2"
   },
   "v2:6": {
     "title": "H-BAHN - ELEKTROMAGNETISCH",
     "audio": "H-Bahn-Elektromagnetisch.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "H-Bahn-e.jpg"
+    "photo": "H-Bahn-e.jpg",
+    "version": "v2"
   },
   "v2:7": {
     "title": "HALFPIPE PIEZO",
     "audio": "Halfpipe-U-Piezo.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "halfpipe.JPG"
+    "photo": "halfpipe.JPG",
+    "version": "v2"
   },
   "v2:8": {
     "title": "HÜLSENBECK-GRAB",
     "audio": "Huelsenbeck-Grab-Gras-mono.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "huelsenbeck.JPG"
+    "photo": "huelsenbeck.JPG",
+    "version": "v2"
   },
   "v2:9": {
     "title": "PHOENIX-SEE BOOTE",
     "audio": "Phoenixsee-Bootwimpel.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "Phoenix-See-Boote.JPG"
+    "photo": "Phoenix-See-Boote.JPG",
+    "version": "v2"
   },
   "v2:10": {
     "title": "PHOENIX-SEE PER RAD",
     "audio": "Phoenixsee-Radrunde.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "phoenixsee-radrunde.JPG"
+    "photo": "phoenixsee-radrunde.JPG",
+    "version": "v2"
   },
   "v2:11": {
     "title": "REINOLDIKIRCHE MIT KLAVIER",
     "audio": "Reinoldikirche+Klavier.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "reinoldikirche+klavier.JPG"
+    "photo": "reinoldikirche+klavier.JPG",
+    "version": "v2"
   },
   "v2:12": {
     "title": "REINOLDIKIRCHE",
     "audio": "Reinoldikirche.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "Reinoldikirche.jpg"
+    "photo": "Reinoldikirche.jpg",
+    "version": "v2"
   },
   "v2:13": {
     "title": "ROMBERGPARK TUNNEL",
     "audio": "Rombergpark-Tunnel.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "Rombergpark-Tunnel.JPG"
+    "photo": "Rombergpark-Tunnel.JPG",
+    "version": "v2"
   },
   "v2:14": {
     "title": "SCHNECKEN",
     "audio": "Schnecken.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "schnecken.jpg"
+    "photo": "schnecken.jpg",
+    "version": "v2"
   },
   "v2:15": {
     "title": "SCHNETTKERBRÜCKE - OBEN",
     "audio": "Schnettkerbrucke-oben.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "schnettkerbrucke-oben.JPG"
+    "photo": "schnettkerbrucke-oben.JPG",
+    "version": "v2"
   },
   "v2:16": {
     "title": "SCHNETTKERBRÜCKE - UNTEN",
     "audio": "Schnettkerbrucke-unterhalb.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "schnettkerbrucke-unten.JPG"
+    "photo": "schnettkerbrucke-unten.JPG",
+    "version": "v2"
   },
   "v2:17": {
     "title": "STADION - GEISTERSPIEL",
     "audio": "Stadion-Geisterspiel.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "Stadion-geisterspiel.jpg"
+    "photo": "Stadion-geisterspiel.jpg",
+    "version": "v2"
   },
   "v2:18": {
     "title": "U-BAHN",
     "audio": "U-Bahn-Akustisch.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "u-bahn-akustisch.JPG"
+    "photo": "u-bahn-akustisch.JPG",
+    "version": "v2"
   },
   "v2:19": {
     "title": "U-BAHN - ELEKTROMAGNETISCH",
     "audio": "U-Bahn-Elektromagnetisch.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "u-bahn-elektromagnetisch.JPG"
+    "photo": "u-bahn-elektromagnetisch.JPG",
+    "version": "v2"
   },
   "v2:20": {
     "title": "TREPPENHAUS - U",
     "audio": "U-Treppenhaus.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "U-treppenhaus.JPG"
+    "photo": "U-treppenhaus.JPG",
+    "version": "v2"
   },
   "v2:21": {
     "title": "WESTPARK - SPIELPLATZ",
     "audio": "Westpark-Spielplatz.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "westpark-spielplatz.JPG"
+    "photo": "westpark-spielplatz.JPG",
+    "version": "v2"
   },
   "v2:22": {
     "title": "WITZE",
     "audio": "Witze.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "Witze.JPG"
+    "photo": "Witze.JPG",
+    "version": "v2"
   },
   "v2:23": {
     "title": "WITZEAUTOMAT",
     "audio": "Witzeautomat.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "Witzeautomat.JPG"
+    "photo": "Witzeautomat.JPG",
+    "version": "v2"
   },
   "v2:24": {
     "title": "ZOO",
     "audio": "Zoo.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "Zoo.JPG"
+    "photo": "Zoo.JPG",
+    "version": "v2"
   },
   "v2:25": {
     "title": "BERIMBAO",
     "audio": "berimbao.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Berimbao.jpg"
+    "photo": "Berimbao.jpg",
+    "version": "v2"
   },
   "v2:26": {
     "title": "CLAPS",
     "audio": "claps.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "claps.JPG"
+    "photo": "claps.JPG",
+    "version": "v2"
   },
   "v2:27": {
     "title": "DAN-MOI",
     "audio": "dan-moi.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Dan_Moi.jpg"
+    "photo": "Dan_Moi.jpg",
+    "version": "v2"
   },
   "v2:28": {
     "title": "DUNDUN",
     "audio": "dundun.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Dundun.jpg"
+    "photo": "Dundun.jpg",
+    "version": "v2"
   },
   "v2:29": {
     "title": "EMSCHER",
     "audio": "emscher-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "Emscher-text.JPG"
+    "photo": "Emscher-text.JPG",
+    "version": "v2"
   },
   "v2:30": {
     "title": "FUSSGÄNGERBRÜCKE",
     "audio": "fussgangerbrucke-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "fussgangerbrucke-text.JPG"
+    "photo": "fussgangerbrucke-text.JPG",
+    "version": "v2"
   },
   "v2:31": {
     "title": "GASOMETER",
     "audio": "gasometer-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "gasometer-text.JPG"
+    "photo": "gasometer-text.JPG",
+    "version": "v2"
   },
   "v2:32": {
     "title": "GHATAM",
     "audio": "ghatam.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Ghatam.jpg"
+    "photo": "Ghatam.jpg",
+    "version": "v2"
   },
   "v2:33": {
     "title": "GONG",
     "audio": "gong.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Gong.jpg"
+    "photo": "Gong.jpg",
+    "version": "v2"
   },
   "v2:34": {
     "title": "HALFPIPE",
     "audio": "halfpipe-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "halfpipe-text.JPG"
+    "photo": "halfpipe-text.JPG",
+    "version": "v2"
   },
   "v2:35": {
     "title": "MBIRA",
     "audio": "mbira.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Mbira.jpg"
+    "photo": "Mbira.jpg",
+    "version": "v2"
   },
   "v2:36": {
     "title": "OCCARINA",
     "audio": "occarina.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Occarina.jpg"
+    "photo": "Occarina.jpg",
+    "version": "v2"
   },
   "v2:37": {
     "title": "PHOENIX-SEE",
     "audio": "phoenix-see-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "Phoenix-See-text.JPG"
+    "photo": "Phoenix-See-text.JPG",
+    "version": "v2"
   },
   "v2:38": {
     "title": "REGENAUFFANGBECKEN",
     "audio": "regenauffangbecken-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "regenauffangbecken-text.JPG"
+    "photo": "regenauffangbecken-text.JPG",
+    "version": "v2"
   },
   "v2:39": {
     "title": "REGENAUFFANGBECKEN",
     "audio": "regenauffangbecken.mp3",
     "artist_id": "FIELD RECORDING",
-    "photo": "regenauffangbecken.JPG"
+    "photo": "regenauffangbecken.JPG",
+    "version": "v2"
   },
   "v2:40": {
     "title": "REINOLDIKIRCHE",
     "audio": "reinoldikirche-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "Reinoldikirche-text.jpg"
+    "photo": "Reinoldikirche-text.jpg",
+    "version": "v2"
   },
   "v2:41": {
     "title": "SCHNECKEN",
     "audio": "schnecken-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "schnecken-text.jpg"
+    "photo": "schnecken-text.jpg",
+    "version": "v2"
   },
   "v2:42": {
     "title": "SHRUTI",
     "audio": "shruti.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Shruti.jpg"
+    "photo": "Shruti.jpg",
+    "version": "v2"
   },
   "v2:43": {
     "title": "STADION",
     "audio": "stadion-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "stadion_text.JPG"
+    "photo": "stadion_text.JPG",
+    "version": "v2"
   },
   "v2:44": {
     "title": "TAKELAGE",
     "audio": "takelage-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "takelage-text.JPG"
+    "photo": "takelage-text.JPG",
+    "version": "v2"
   },
   "v2:45": {
     "title": "TUNNEL",
     "audio": "tunnel-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "tunnel-text.JPG"
+    "photo": "tunnel-text.JPG",
+    "version": "v2"
   },
   "v2:46": {
     "title": "U-BAHN",
     "audio": "u-bahn-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "u-bahn-text.JPG"
+    "photo": "u-bahn-text.JPG",
+    "version": "v2"
   },
   "v2:47": {
     "title": "TREPPENHAUS AM U",
     "audio": "u-treppenhaus-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "U-Treppenhaus-text.JPG"
+    "photo": "U-Treppenhaus-text.JPG",
+    "version": "v2"
   },
   "v2:48": {
     "title": "UDU",
     "audio": "udu.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Udu.jpg"
+    "photo": "Udu.jpg",
+    "version": "v2"
   },
   "v2:49": {
     "title": "WATERDRUM",
     "audio": "waterdrum.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Waterdrum.jpg"
+    "photo": "Waterdrum.jpg",
+    "version": "v2"
   },
   "v2:50": {
     "title": "WESTFRIEDHOF",
     "audio": "westfriedhof-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "westfriedhof-text.JPG"
+    "photo": "westfriedhof-text.JPG",
+    "version": "v2"
   },
   "v2:51": {
     "title": "WESTPARK SPIELPLATZ",
     "audio": "westpark-spielplatz-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "westpark-spielplatz-text.JPG"
+    "photo": "westpark-spielplatz-text.JPG",
+    "version": "v2"
   },
   "v2:52": {
     "title": "WITZEAUTOMAT",
     "audio": "witzeautomat-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "witzeautomat-text.JPG"
+    "photo": "witzeautomat-text.JPG",
+    "version": "v2"
   },
   "v2:53": {
     "title": "WOODSLIT DRUM",
     "audio": "woodslitdrum.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Woodslitdrum.jpg"
+    "photo": "Woodslitdrum.jpg",
+    "version": "v2"
   },
   "v2:54": {
     "title": "ZITHER",
     "audio": "zither.mp3",
     "artist_id": "TRADITIONAL INSTRUMENT",
-    "photo": "Zither.jpg"
+    "photo": "Zither.jpg",
+    "version": "v2"
   },
   "v2:55": {
     "title": "ZOO",
     "audio": "zoo-text.mp3",
     "artist_id": "BRANDSTIFTER TEXT",
-    "photo": "zoo-text.JPG"
+    "photo": "zoo-text.JPG",
+    "version": "v2"
   },
   "v1:13": {
     "title": "mantra",
     "audio": "achim-elec-mantra.mp3",
     "artist_id": "14",
-    "photo": "achim-elec-mantra_IybDoyZ.JPG"
+    "photo": "achim-elec-mantra_IybDoyZ.JPG",
+    "version": "v1"
   },
   "v1:14": {
     "title": "aire",
     "audio": "pablo-aire.mp3",
     "artist_id": "24",
-    "photo": "pablo_aire.jpg"
+    "photo": "pablo_aire.jpg",
+    "version": "v1"
   },
   "v1:15": {
     "title": "love-story",
     "audio": "pablo-love-story.mp3",
     "artist_id": "24",
-    "photo": "pablo_love-story.jpg"
+    "photo": "pablo_love-story.jpg",
+    "version": "v1"
   },
   "v1:16": {
     "title": "enthusiast",
     "audio": "michael-enthusiast.mp3",
     "artist_id": "26",
-    "photo": "michael-enthusiast_ZwlakbB.jpg"
+    "photo": "michael-enthusiast_ZwlakbB.jpg",
+    "version": "v1"
   },
   "v1:17": {
     "title": "rumble",
     "audio": "michael-rumble.mp3",
     "artist_id": "26",
-    "photo": "michael-rumble_UseNvXO.jpg"
+    "photo": "michael-rumble_UseNvXO.jpg",
+    "version": "v1"
   },
   "v1:18": {
     "title": "emerge",
     "audio": "gaile-emerge.mp3",
     "artist_id": "22",
-    "photo": "gaile-emerge_MPlSm4i.jpg"
+    "photo": "gaile-emerge_MPlSm4i.jpg",
+    "version": "v1"
   },
   "v1:19": {
     "title": "clock",
     "audio": "gaile-clock.mp3",
     "artist_id": "22",
-    "photo": "gaile-clock_I6MhACF.jpg"
+    "photo": "gaile-clock_I6MhACF.jpg",
+    "version": "v1"
   },
   "v1:20": {
     "title": "bouncing",
     "audio": "achim-acou-bouncing-low_ZQmGDnV.mp3",
     "artist_id": "27",
-    "photo": "achim_acou-bouncing.JPG"
+    "photo": "achim_acou-bouncing.JPG",
+    "version": "v1"
   },
   "v1:21": {
     "title": "eyebrow",
     "audio": "achim-acou-eyebrow.mp3",
     "artist_id": "27",
-    "photo": "achim_acou-eyebrow.JPG"
+    "photo": "achim_acou-eyebrow.JPG",
+    "version": "v1"
   },
   "v1:22": {
     "title": "gambled",
     "audio": "achim-acou-gambled.mp3",
     "artist_id": "27",
-    "photo": "achim_acou-gambled.JPG"
+    "photo": "achim_acou-gambled.JPG",
+    "version": "v1"
   },
   "v1:23": {
     "title": "ghostly",
     "audio": "achim-acou-ghostly.mp3",
     "artist_id": "27",
-    "photo": "achim_acou-ghostly.JPG"
+    "photo": "achim_acou-ghostly.JPG",
+    "version": "v1"
   },
   "v1:24": {
     "title": "joy",
     "audio": "achim-acou-joy.mp3",
     "artist_id": "27",
-    "photo": "achim_acou-joy.JPG"
+    "photo": "achim_acou-joy.JPG",
+    "version": "v1"
   },
   "v1:25": {
     "title": "loving",
     "audio": "achim-acou-loving.mp3",
     "artist_id": "27",
-    "photo": "achim_acou-loving.JPG"
+    "photo": "achim_acou-loving.JPG",
+    "version": "v1"
   },
   "v1:26": {
     "title": "lucky",
     "audio": "achim-acou-lucky.mp3",
     "artist_id": "27",
-    "photo": "achim_acou-lucky.JPG"
+    "photo": "achim_acou-lucky.JPG",
+    "version": "v1"
   },
   "v1:27": {
     "title": "portugal",
     "audio": "achim-acou-portugal.mp3",
     "artist_id": "27",
-    "photo": "achim_acou-portugal.JPG"
+    "photo": "achim_acou-portugal.JPG",
+    "version": "v1"
   },
   "v1:28": {
     "title": "schlepp",
     "audio": "achim-acou-schlepp.mp3",
     "artist_id": "27",
-    "photo": "achim_acou-schlepp.JPG"
+    "photo": "achim_acou-schlepp.JPG",
+    "version": "v1"
   },
   "v1:29": {
     "title": "weird",
     "audio": "achim-acou-weird.mp3",
     "artist_id": "27",
-    "photo": "achim_acou-weird.jpg"
+    "photo": "achim_acou-weird.jpg",
+    "version": "v1"
   },
   "v1:30": {
     "title": "driving",
     "audio": "achim-drum-driving.mp3",
     "artist_id": "28",
-    "photo": "achim-drum-driving_iyKUHVG.jpg"
+    "photo": "achim-drum-driving_iyKUHVG.jpg",
+    "version": "v1"
   },
   "v1:31": {
     "title": "falling",
     "audio": "achim-drum-falling.mp3",
     "artist_id": "28",
-    "photo": "achim-drum-falling_q4bVtDu.jpg"
+    "photo": "achim-drum-falling_q4bVtDu.jpg",
+    "version": "v1"
   },
   "v1:32": {
     "title": "circled",
     "audio": "achim-elec-circled.mp3",
     "artist_id": "14",
-    "photo": "achim-elec-circled_GLpPXtd.jpg"
+    "photo": "achim-elec-circled_GLpPXtd.jpg",
+    "version": "v1"
   },
   "v1:33": {
     "title": "mourning",
     "audio": "achim-elec-mourning.mp3",
     "artist_id": "14",
-    "photo": "achim-elec-mourning.jpg"
+    "photo": "achim-elec-mourning.jpg",
+    "version": "v1"
   },
   "v1:34": {
     "title": "nackt",
     "audio": "achim-elec-nackt.mp3",
     "artist_id": "14",
-    "photo": "achim-elec-nackt.jpg"
+    "photo": "achim-elec-nackt.jpg",
+    "version": "v1"
   },
   "v1:35": {
     "title": "neck",
     "audio": "achim-elec-neck.mp3",
     "artist_id": "14",
-    "photo": "achim-elec-neck.jpg"
+    "photo": "achim-elec-neck.jpg",
+    "version": "v1"
   },
   "v1:36": {
     "title": "schlamassel",
     "audio": "achim-elec-schlamassel.mp3",
     "artist_id": "14",
-    "photo": "achim-elec-schlamassel.jpg"
+    "photo": "achim-elec-schlamassel.jpg",
+    "version": "v1"
   },
   "v1:37": {
     "title": "soft",
     "audio": "achim-elec-soft.mp3",
     "artist_id": "14",
-    "photo": "achim-elec-soft.jpg"
+    "photo": "achim-elec-soft.jpg",
+    "version": "v1"
   },
   "v1:38": {
     "title": "springtime",
     "audio": "achim-elec-springtime.mp3",
     "artist_id": "14",
-    "photo": "achim-elec-springtime.jpg"
+    "photo": "achim-elec-springtime.jpg",
+    "version": "v1"
   },
   "v1:39": {
     "title": "zapping",
     "audio": "achim-elec-zapping.mp3",
     "artist_id": "14",
-    "photo": "achim-elec-zapping.jpg"
+    "photo": "achim-elec-zapping.jpg",
+    "version": "v1"
   },
   "v1:40": {
     "title": "breeze",
     "audio": "gaile-breeze.mp3",
     "artist_id": "22",
-    "photo": "gaile-breeze.jpg"
+    "photo": "gaile-breeze.jpg",
+    "version": "v1"
   },
   "v1:41": {
     "title": "come",
     "audio": "gaile-come.mp3",
     "artist_id": "22",
-    "photo": "gaile-come.jpg"
+    "photo": "gaile-come.jpg",
+    "version": "v1"
   },
   "v1:42": {
     "title": "come-out",
     "audio": "gaile-comeout.mp3",
     "artist_id": "22",
-    "photo": "gaile-comeout.jpg"
+    "photo": "gaile-comeout.jpg",
+    "version": "v1"
   },
   "v1:43": {
     "title": "drop-in",
     "audio": "gaile-drop-in.mp3",
     "artist_id": "22",
-    "photo": "gaile-drop-in.jpg"
+    "photo": "gaile-drop-in.jpg",
+    "version": "v1"
   },
   "v1:44": {
     "title": "expose",
     "audio": "gaile-expose.mp3",
     "artist_id": "22",
-    "photo": "gaile-expose.jpg"
+    "photo": "gaile-expose.jpg",
+    "version": "v1"
   },
   "v1:45": {
     "title": "light",
     "audio": "gaile-light.mp3",
     "artist_id": "22",
-    "photo": "gaile-light.jpg"
+    "photo": "gaile-light.jpg",
+    "version": "v1"
   },
   "v1:46": {
     "title": "loom",
     "audio": "gaile-loom.mp3",
     "artist_id": "22",
-    "photo": "gaile-loom.jpg"
+    "photo": "gaile-loom.jpg",
+    "version": "v1"
   },
   "v1:47": {
     "title": "materialize",
     "audio": "gaile-materialize.mp3",
     "artist_id": "22",
-    "photo": "gaile-materialize.jpg"
+    "photo": "gaile-materialize.jpg",
+    "version": "v1"
   },
   "v1:48": {
     "title": "present",
     "audio": "gaile-present.mp3",
     "artist_id": "22",
-    "photo": "gaile-present.jpg"
+    "photo": "gaile-present.jpg",
+    "version": "v1"
   },
   "v1:49": {
     "title": "recur",
     "audio": "gaile-recur.mp3",
     "artist_id": "22",
-    "photo": "gaile-recur.jpg"
+    "photo": "gaile-recur.jpg",
+    "version": "v1"
   },
   "v1:50": {
     "title": "surface",
     "audio": "gaile-surface.mp3",
     "artist_id": "22",
-    "photo": "gaile-surface.jpg"
+    "photo": "gaile-surface.jpg",
+    "version": "v1"
   },
   "v1:51": {
     "title": "cheeks",
     "audio": "jaap-cheeks.mp3",
     "artist_id": "29",
-    "photo": "jaap-cheeks_wtIXYov.jpg"
+    "photo": "jaap-cheeks_wtIXYov.jpg",
+    "version": "v1"
   },
   "v1:52": {
     "title": "commercials",
     "audio": "jaap-commercials.mp3",
     "artist_id": "29",
-    "photo": "jaap-commercials_nhi1Bsm.jpg"
+    "photo": "jaap-commercials_nhi1Bsm.jpg",
+    "version": "v1"
   },
   "v1:53": {
     "title": "flying",
     "audio": "jaap-flying.mp3",
     "artist_id": "29",
-    "photo": "jaap-frying_PyxIO93.jpg"
+    "photo": "jaap-frying_PyxIO93.jpg",
+    "version": "v1"
   },
   "v1:54": {
     "title": "humhum",
     "audio": "jaap-humhum.mp3",
     "artist_id": "29",
-    "photo": "jaap-humhum_B30DKpP.jpg"
+    "photo": "jaap-humhum_B30DKpP.jpg",
+    "version": "v1"
   },
   "v1:55": {
     "title": "lanketrrgll",
     "audio": "jaap-lanketrrgll.mp3",
     "artist_id": "29",
-    "photo": "jaap-lanketrrgll_Y3DGItI.jpg"
+    "photo": "jaap-lanketrrgll_Y3DGItI.jpg",
+    "version": "v1"
   },
   "v1:57": {
     "title": "oneandonly",
     "audio": "jaap-oneandonly.mp3",
     "artist_id": "29",
-    "photo": "jaap-oneandonly_r7Y1dVv.jpg"
+    "photo": "jaap-oneandonly_r7Y1dVv.jpg",
+    "version": "v1"
   },
   "v1:58": {
     "title": "ploff",
     "audio": "jaap-ploff.mp3",
     "artist_id": "29",
-    "photo": "jaap-ploff_yIpA4V8.jpg"
+    "photo": "jaap-ploff_yIpA4V8.jpg",
+    "version": "v1"
   },
   "v1:59": {
     "title": "ptk",
     "audio": "jaap-ptk.mp3",
     "artist_id": "29",
-    "photo": "jaap-ptk_c5ydq9Y.jpg"
+    "photo": "jaap-ptk_c5ydq9Y.jpg",
+    "version": "v1"
   },
   "v1:60": {
     "title": "rages",
     "audio": "jaap-rages.mp3",
     "artist_id": "29",
-    "photo": "jaap-rages_TYUaguv.jpg"
+    "photo": "jaap-rages_TYUaguv.jpg",
+    "version": "v1"
   },
   "v1:61": {
     "title": "accent",
     "audio": "john-accent.mp3",
     "artist_id": "30",
-    "photo": "john-accent.jpg"
+    "photo": "john-accent.jpg",
+    "version": "v1"
   },
   "v1:62": {
     "title": "bells",
     "audio": "john-bells.mp3",
     "artist_id": "30",
-    "photo": "john-bells.jpg"
+    "photo": "john-bells.jpg",
+    "version": "v1"
   },
   "v1:63": {
     "title": "briff",
     "audio": "john-briff.mp3",
     "artist_id": "30",
-    "photo": "john-briff.jpg"
+    "photo": "john-briff.jpg",
+    "version": "v1"
   },
   "v1:64": {
     "title": "click",
     "audio": "john-click.mp3",
     "artist_id": "30",
-    "photo": "john-click.jpg"
+    "photo": "john-click.jpg",
+    "version": "v1"
   },
   "v1:65": {
     "title": "drum",
     "audio": "john-drum.mp3",
     "artist_id": "30",
-    "photo": "john-drum.jpg"
+    "photo": "john-drum.jpg",
+    "version": "v1"
   },
   "v1:66": {
     "title": "high",
     "audio": "john-hi.mp3",
     "artist_id": "30",
-    "photo": "john-hi.jpg"
+    "photo": "john-hi.jpg",
+    "version": "v1"
   },
   "v1:67": {
     "title": "low",
     "audio": "john-lo.mp3",
     "artist_id": "30",
-    "photo": "john-lo.jpg"
+    "photo": "john-lo.jpg",
+    "version": "v1"
   },
   "v1:68": {
     "title": "noise",
     "audio": "john-noise.mp3",
     "artist_id": "30",
-    "photo": "john-noise.jpg"
+    "photo": "john-noise.jpg",
+    "version": "v1"
   },
   "v1:69": {
     "title": "pattern",
     "audio": "john-pattern.mp3",
     "artist_id": "30",
-    "photo": "john-pattern.jpg"
+    "photo": "john-pattern.jpg",
+    "version": "v1"
   },
   "v1:70": {
     "title": "pulse",
     "audio": "john-pulse.mp3",
     "artist_id": "30",
-    "photo": "john-pulse.jpg"
+    "photo": "john-pulse.jpg",
+    "version": "v1"
   },
   "v1:71": {
     "title": "contact",
     "audio": "jerome-contact.mp3",
     "artist_id": "31",
-    "photo": "jerome-contact.jpg"
+    "photo": "jerome-contact.jpg",
+    "version": "v1"
   },
   "v1:72": {
     "title": "enterrement",
     "audio": "jerome-enterrement.mp3",
     "artist_id": "31",
-    "photo": "jerome-enterrement.jpg"
+    "photo": "jerome-enterrement.jpg",
+    "version": "v1"
   },
   "v1:73": {
     "title": "invasion",
     "audio": "jerome-invasion.mp3",
     "artist_id": "31",
-    "photo": "jerome-invasion.jpg"
+    "photo": "jerome-invasion.jpg",
+    "version": "v1"
   },
   "v1:74": {
     "title": "inversion",
     "audio": "jerome-inversion.mp3",
     "artist_id": "31",
-    "photo": "jerome-inversion.jpg"
+    "photo": "jerome-inversion.jpg",
+    "version": "v1"
   },
   "v1:75": {
     "title": "loop",
     "audio": "jerome-loop.mp3",
     "artist_id": "31",
-    "photo": "jerome-loop.jpg"
+    "photo": "jerome-loop.jpg",
+    "version": "v1"
   },
   "v1:76": {
     "title": "rupture",
     "audio": "jerome-rupture.mp3",
     "artist_id": "31",
-    "photo": "jerome-rupture.jpg"
+    "photo": "jerome-rupture.jpg",
+    "version": "v1"
   },
   "v1:77": {
     "title": "scratch",
     "audio": "jerome-scratch.mp3",
     "artist_id": "31",
-    "photo": "jerome-scratch.jpg"
+    "photo": "jerome-scratch.jpg",
+    "version": "v1"
   },
   "v1:78": {
     "title": "souffles",
     "audio": "jerome-souffles.mp3",
     "artist_id": "31",
-    "photo": "jerome-souffles.jpg"
+    "photo": "jerome-souffles.jpg",
+    "version": "v1"
   },
   "v1:79": {
     "title": "tirette",
     "audio": "jerome-tirette.mp3",
     "artist_id": "31",
-    "photo": "jerome-tirette.jpg"
+    "photo": "jerome-tirette.jpg",
+    "version": "v1"
   },
   "v1:80": {
     "title": "turbulences",
     "audio": "jerome-turbulences.mp3",
     "artist_id": "31",
-    "photo": "jerome-turbolences.jpg"
+    "photo": "jerome-turbolences.jpg",
+    "version": "v1"
   },
   "v1:81": {
     "title": "bells",
     "audio": "marta-bells.mp3",
     "artist_id": "32",
-    "photo": "marta-bells.jpg"
+    "photo": "marta-bells.jpg",
+    "version": "v1"
   },
   "v1:82": {
     "title": "carillion",
     "audio": "marta-carillon.mp3",
     "artist_id": "32",
-    "photo": "marta-carillion.jpg"
+    "photo": "marta-carillion.jpg",
+    "version": "v1"
   },
   "v1:83": {
     "title": "deformelody",
     "audio": "marta-deformelody.mp3",
     "artist_id": "32",
-    "photo": "marta-deformelody.jpg"
+    "photo": "marta-deformelody.jpg",
+    "version": "v1"
   },
   "v1:84": {
     "title": "fireworks",
     "audio": "marta-fireworks.mp3",
     "artist_id": "32",
-    "photo": "marta-fireworks.jpg"
+    "photo": "marta-fireworks.jpg",
+    "version": "v1"
   },
   "v1:85": {
     "title": "motorjet",
     "audio": "marta-motorjet.mp3",
     "artist_id": "32",
-    "photo": "marta-motorjet.jpg"
+    "photo": "marta-motorjet.jpg",
+    "version": "v1"
   },
   "v1:86": {
     "title": "pipes",
     "audio": "marta-pipes.mp3",
     "artist_id": "32",
-    "photo": "marta-pipes.jpg"
+    "photo": "marta-pipes.jpg",
+    "version": "v1"
   },
   "v1:87": {
     "title": "planing",
     "audio": "marta-planing.mp3",
     "artist_id": "32",
-    "photo": "marta-planing.jpg"
+    "photo": "marta-planing.jpg",
+    "version": "v1"
   },
   "v1:88": {
     "title": "rain",
     "audio": "marta-rain.mp3",
     "artist_id": "32",
-    "photo": "marta-rain.jpg"
+    "photo": "marta-rain.jpg",
+    "version": "v1"
   },
   "v1:89": {
     "title": "strings",
     "audio": "marta-strings.mp3",
     "artist_id": "32",
-    "photo": "marta-strings.jpg"
+    "photo": "marta-strings.jpg",
+    "version": "v1"
   },
   "v1:90": {
     "title": "vhf",
     "audio": "marta-vhf.mp3",
     "artist_id": "32",
-    "photo": "marta-vhf.jpg"
+    "photo": "marta-vhf.jpg",
+    "version": "v1"
   },
   "v1:91": {
     "title": "chicago",
     "audio": "michael-chicago.mp3",
     "artist_id": "26",
-    "photo": "michael-chicago.jpg"
+    "photo": "michael-chicago.jpg",
+    "version": "v1"
   },
   "v1:92": {
     "title": "dusty",
     "audio": "michael-dusty.mp3",
     "artist_id": "26",
-    "photo": "michael-dusty.jpg"
+    "photo": "michael-dusty.jpg",
+    "version": "v1"
   },
   "v1:93": {
     "title": "hello",
     "audio": "michael-hello.mp3",
     "artist_id": "26",
-    "photo": "michael-hello.jpg"
+    "photo": "michael-hello.jpg",
+    "version": "v1"
   },
   "v1:94": {
     "title": "little",
     "audio": "michael-little.mp3",
     "artist_id": "26",
-    "photo": "michael-little.jpg"
+    "photo": "michael-little.jpg",
+    "version": "v1"
   },
   "v1:95": {
     "title": "long",
     "audio": "michael-long.mp3",
     "artist_id": "26",
-    "photo": "michael-long.jpg"
+    "photo": "michael-long.jpg",
+    "version": "v1"
   },
   "v1:96": {
     "title": "meta",
     "audio": "michael-meta.mp3",
     "artist_id": "26",
-    "photo": "michael-meta.jpg"
+    "photo": "michael-meta.jpg",
+    "version": "v1"
   },
   "v1:97": {
     "title": "mixed",
     "audio": "michael-mixed.mp3",
     "artist_id": "26",
-    "photo": "michael-mixed.jpg"
+    "photo": "michael-mixed.jpg",
+    "version": "v1"
   },
   "v1:98": {
     "title": "need",
     "audio": "michael-need.mp3",
     "artist_id": "26",
-    "photo": "michael-need.jpg"
+    "photo": "michael-need.jpg",
+    "version": "v1"
   },
   "v1:99": {
     "title": "question",
     "audio": "michael-question.mp3",
     "artist_id": "26",
-    "photo": "michael-question.jpg"
+    "photo": "michael-question.jpg",
+    "version": "v1"
   },
   "v1:100": {
     "title": "raw",
     "audio": "michael-raw.mp3",
     "artist_id": "26",
-    "photo": "michael-raw.jpg"
+    "photo": "michael-raw.jpg",
+    "version": "v1"
   },
   "v1:101": {
     "title": "siren",
     "audio": "michael-siren.mp3",
     "artist_id": "26",
-    "photo": "michael-siren.jpg"
+    "photo": "michael-siren.jpg",
+    "version": "v1"
   },
   "v1:102": {
     "title": "think",
     "audio": "michael-think.mp3",
     "artist_id": "26",
-    "photo": "michael-think.jpg"
+    "photo": "michael-think.jpg",
+    "version": "v1"
   },
   "v1:103": {
     "title": "cage",
     "audio": "pablo-cage.mp3",
     "artist_id": "24",
-    "photo": "pablo_cage.jpg"
+    "photo": "pablo_cage.jpg",
+    "version": "v1"
   },
   "v1:104": {
     "title": "colorida",
     "audio": "pablo-colorida.mp3",
     "artist_id": "24",
-    "photo": "pablo_colorida.jpg"
+    "photo": "pablo_colorida.jpg",
+    "version": "v1"
   },
   "v1:105": {
     "title": "filtro",
     "audio": "pablo-filtro.mp3",
     "artist_id": "24",
-    "photo": "pablo_filtro.jpg"
+    "photo": "pablo_filtro.jpg",
+    "version": "v1"
   },
   "v1:106": {
     "title": "glysophat",
     "audio": "pablo-glysophat.mp3",
     "artist_id": "24",
-    "photo": "pablo_glysophat.jpg"
+    "photo": "pablo_glysophat.jpg",
+    "version": "v1"
   },
   "v1:107": {
     "title": "muerte",
     "audio": "pablo-love-muerte.mp3",
     "artist_id": "24",
-    "photo": "pablo_muerte.jpg"
+    "photo": "pablo_muerte.jpg",
+    "version": "v1"
   },
   "v1:108": {
     "title": "optimismo",
     "audio": "pablo-love-optimismo.mp3",
     "artist_id": "24",
-    "photo": "pablo_optimismo.jpg"
+    "photo": "pablo_optimismo.jpg",
+    "version": "v1"
   },
   "v1:109": {
     "title": "puro",
     "audio": "pablo-love-puro.mp3",
     "artist_id": "24",
-    "photo": "pablo_puro.jpg"
+    "photo": "pablo_puro.jpg",
+    "version": "v1"
   },
   "v1:110": {
     "title": "trioledad",
     "audio": "pablo-love-trioledad.mp3",
     "artist_id": "24",
-    "photo": "pablo_trioledad.jpg"
+    "photo": "pablo_trioledad.jpg",
+    "version": "v1"
   },
   "v1:111": {
     "title": "deadline",
     "audio": "rhodri-deadline.mp3",
     "artist_id": "33",
-    "photo": "rhodri-deadline.jpg"
+    "photo": "rhodri-deadline.jpg",
+    "version": "v1"
   },
   "v1:112": {
     "title": "everything",
     "audio": "rhodri-everything.mp3",
     "artist_id": "33",
-    "photo": "rhodri-everything.jpg"
+    "photo": "rhodri-everything.jpg",
+    "version": "v1"
   },
   "v1:113": {
     "title": "filming",
     "audio": "rhodri-filming.mp3",
     "artist_id": "33",
-    "photo": "rhodri-filming.jpg"
+    "photo": "rhodri-filming.jpg",
+    "version": "v1"
   },
   "v1:114": {
     "title": "involved",
     "audio": "rhodri-involved.mp3",
     "artist_id": "33",
-    "photo": "rhodri-involved.jpg"
+    "photo": "rhodri-involved.jpg",
+    "version": "v1"
   },
   "v1:115": {
     "title": "look",
     "audio": "rhodri-look.mp3",
     "artist_id": "33",
-    "photo": "rhodri-look.jpg"
+    "photo": "rhodri-look.jpg",
+    "version": "v1"
   },
   "v1:116": {
     "title": "once",
     "audio": "rhodri-once.mp3",
     "artist_id": "33",
-    "photo": "rhodri-once.jpg"
+    "photo": "rhodri-once.jpg",
+    "version": "v1"
   },
   "v1:117": {
     "title": "running",
     "audio": "rhodri-running.mp3",
     "artist_id": "33",
-    "photo": "rhodri-running.jpg"
+    "photo": "rhodri-running.jpg",
+    "version": "v1"
   },
   "v1:118": {
     "title": "train",
     "audio": "rhodri-train.mp3",
     "artist_id": "33",
-    "photo": "rhodri-train.jpg"
+    "photo": "rhodri-train.jpg",
+    "version": "v1"
   },
   "v1:119": {
     "title": "up",
     "audio": "rhodri-up.mp3",
     "artist_id": "33",
-    "photo": "rhodri-up.jpg"
+    "photo": "rhodri-up.jpg",
+    "version": "v1"
   },
   "v1:120": {
     "title": "women",
     "audio": "rhodri-women.mp3",
     "artist_id": "33",
-    "photo": "rhodri-women.jpg"
+    "photo": "rhodri-women.jpg",
+    "version": "v1"
   },
   "v1:121": {
     "title": "birdsurf",
     "audio": "richard-birdsurf.mp3",
     "artist_id": "34",
-    "photo": "richard-birdsurf.jpg"
+    "photo": "richard-birdsurf.jpg",
+    "version": "v1"
   },
   "v1:122": {
     "title": "compass-needle",
     "audio": "richard-compass-needle.mp3",
     "artist_id": "34",
-    "photo": "richard-compass.jpg"
+    "photo": "richard-compass.jpg",
+    "version": "v1"
   },
   "v1:123": {
     "title": "machu-picchu",
     "audio": "richard-machupicchu.mp3",
     "artist_id": "34",
-    "photo": "richard-machupicchu.jpg"
+    "photo": "richard-machupicchu.jpg",
+    "version": "v1"
   },
   "v1:124": {
     "title": "pearleaf",
     "audio": "richard-pearleaf.mp3",
     "artist_id": "34",
-    "photo": "richard-pearleaf.jpg"
+    "photo": "richard-pearleaf.jpg",
+    "version": "v1"
   },
   "v1:125": {
     "title": "sea",
     "audio": "richard-sea.mp3",
     "artist_id": "34",
-    "photo": "richard-sea.jpg"
+    "photo": "richard-sea.jpg",
+    "version": "v1"
   },
   "v1:126": {
     "title": "snow",
     "audio": "richard-snow.mp3",
     "artist_id": "34",
-    "photo": "richard-snow.jpg"
+    "photo": "richard-snow.jpg",
+    "version": "v1"
   },
   "v1:127": {
     "title": "tape-delay",
     "audio": "richard-tape-delay.mp3",
     "artist_id": "34",
-    "photo": "richard-tape-delay.jpg"
+    "photo": "richard-tape-delay.jpg",
+    "version": "v1"
   },
   "v1:128": {
     "title": "tijuana-borderfence",
     "audio": "richard-tijuana-borderfence.mp3",
     "artist_id": "34",
-    "photo": "richard-tijuana.jpg"
+    "photo": "richard-tijuana.jpg",
+    "version": "v1"
   },
   "v1:129": {
     "title": "tokyo-bridge",
     "audio": "richard-tokyobridge.mp3",
     "artist_id": "34",
-    "photo": "richard-tokyo-bridge.jpg"
+    "photo": "richard-tokyo-bridge.jpg",
+    "version": "v1"
   },
   "v1:130": {
     "title": "windharps",
     "audio": "richard-windharps.mp3",
     "artist_id": "34",
-    "photo": "richard-windharps.jpg"
+    "photo": "richard-windharps.jpg",
+    "version": "v1"
   },
   "v1:131": {
     "title": "autumn",
     "audio": "sean-autumn.mp3",
     "artist_id": "35",
-    "photo": "sean-autumn.JPG"
+    "photo": "sean-autumn.JPG",
+    "version": "v1"
   },
   "v1:132": {
     "title": "birdhorn",
     "audio": "sean-birdhorn.mp3",
     "artist_id": "35",
-    "photo": "sean-birdhorn.jpg"
+    "photo": "sean-birdhorn.jpg",
+    "version": "v1"
   },
   "v1:133": {
     "title": "clarinet",
     "audio": "sean-clarinet.mp3",
     "artist_id": "35",
-    "photo": "sean-clarinet.jpg"
+    "photo": "sean-clarinet.jpg",
+    "version": "v1"
   },
   "v1:134": {
     "title": "data-voice",
     "audio": "sean-datavoice.mp3",
     "artist_id": "35",
-    "photo": "sean-datavoice.jpg"
+    "photo": "sean-datavoice.jpg",
+    "version": "v1"
   },
   "v1:135": {
     "title": "einsamedame",
     "audio": "sean-einsamedame.mp3",
     "artist_id": "35",
-    "photo": "sean-einsamedame.jpg"
+    "photo": "sean-einsamedame.jpg",
+    "version": "v1"
   },
   "v1:136": {
     "title": "hoghorn",
     "audio": "sean-hoghorn.mp3",
     "artist_id": "35",
-    "photo": "sean-hoghorn.jpg"
+    "photo": "sean-hoghorn.jpg",
+    "version": "v1"
   },
   "v1:137": {
     "title": "melodica",
     "audio": "sean-melodica.mp3",
     "artist_id": "35",
-    "photo": "sean-melodica.jpg"
+    "photo": "sean-melodica.jpg",
+    "version": "v1"
   },
   "v1:138": {
     "title": "oadharc",
     "audio": "sean-oadharc.mp3",
     "artist_id": "35",
-    "photo": "sean-oadharc.jpg"
+    "photo": "sean-oadharc.jpg",
+    "version": "v1"
   },
   "v1:139": {
     "title": "tupiantraumfänger",
     "audio": "sean-tupiantraumfaenger.mp3",
     "artist_id": "35",
-    "photo": "sean-tulpiantraumfaenger.jpg"
+    "photo": "sean-tulpiantraumfaenger.jpg",
+    "version": "v1"
   },
   "v1:140": {
     "title": "wheezychords",
     "audio": "sean-wheezychords.mp3",
     "artist_id": "35",
-    "photo": "sean-wheezychords.jpg"
+    "photo": "sean-wheezychords.jpg",
+    "version": "v1"
   },
   "v1:141": {
     "title": "ancient",
     "audio": "serge-ancient.mp3",
     "artist_id": "36",
-    "photo": "serge-ancient.JPG"
+    "photo": "serge-ancient.JPG",
+    "version": "v1"
   },
   "v1:142": {
     "title": "barock",
     "audio": "serge-barock.mp3",
     "artist_id": "36",
-    "photo": "serge-barock.JPG"
+    "photo": "serge-barock.JPG",
+    "version": "v1"
   },
   "v1:143": {
     "title": "cry",
     "audio": "serge-cry.mp3",
     "artist_id": "36",
-    "photo": "serge-cry.JPG"
+    "photo": "serge-cry.JPG",
+    "version": "v1"
   },
   "v1:144": {
     "title": "cushion",
     "audio": "serge-cushion.mp3",
     "artist_id": "36",
-    "photo": "serge-cushion.JPG"
+    "photo": "serge-cushion.JPG",
+    "version": "v1"
   },
   "v1:145": {
     "title": "druvig",
     "audio": "serge-druvig.mp3",
     "artist_id": "36",
-    "photo": "serge-druvig.JPG"
+    "photo": "serge-druvig.JPG",
+    "version": "v1"
   },
   "v1:146": {
     "title": "hoppla",
     "audio": "serge-hoppla.mp3",
     "artist_id": "36",
-    "photo": "serge-hoppla_mVGJ75r.JPG"
+    "photo": "serge-hoppla_mVGJ75r.JPG",
+    "version": "v1"
   },
   "v1:147": {
     "title": "ritual",
     "audio": "serge-ritual.mp3",
     "artist_id": "36",
-    "photo": "serge-ritual.JPG"
+    "photo": "serge-ritual.JPG",
+    "version": "v1"
   },
   "v1:148": {
     "title": "schnipsel",
     "audio": "serge-schnipsel.mp3",
     "artist_id": "36",
-    "photo": "serge-schnipsel.JPG"
+    "photo": "serge-schnipsel.JPG",
+    "version": "v1"
   },
   "v1:149": {
     "title": "start",
     "audio": "serge-start.mp3",
     "artist_id": "36",
-    "photo": "serge-start.JPG"
+    "photo": "serge-start.JPG",
+    "version": "v1"
   },
   "v1:150": {
     "title": "zittrig",
     "audio": "serge-zittrig.mp3",
     "artist_id": "36",
-    "photo": "serge-zittrig.jpg"
+    "photo": "serge-zittrig.jpg",
+    "version": "v1"
   },
   "v1:151": {
     "title": "coffee-chirps",
     "audio": "simon-coffee-chirps.mp3",
     "artist_id": "37",
-    "photo": "simon-coffee-chirps.jpg"
+    "photo": "simon-coffee-chirps.jpg",
+    "version": "v1"
   },
   "v1:152": {
     "title": "cowshed",
     "audio": "simon-cowshed.mp3",
     "artist_id": "37",
-    "photo": "simon-cowshed.jpg"
+    "photo": "simon-cowshed.jpg",
+    "version": "v1"
   },
   "v1:153": {
     "title": "fishbowl",
     "audio": "simon-fishbowl.mp3",
     "artist_id": "37",
-    "photo": "simon-fishbowl.jpg"
+    "photo": "simon-fishbowl.jpg",
+    "version": "v1"
   },
   "v1:154": {
     "title": "geysir",
     "audio": "simon-geysir.mp3",
     "artist_id": "37",
-    "photo": "simon-geysir.jpg"
+    "photo": "simon-geysir.jpg",
+    "version": "v1"
   },
   "v1:155": {
     "title": "machines",
     "audio": "simon-machines.mp3",
     "artist_id": "37",
-    "photo": "simon-machines.jpg"
+    "photo": "simon-machines.jpg",
+    "version": "v1"
   },
   "v1:156": {
     "title": "pipe",
     "audio": "simon-pipe.mp3",
     "artist_id": "37",
-    "photo": "simon-pipe.jpg"
+    "photo": "simon-pipe.jpg",
+    "version": "v1"
   },
   "v1:157": {
     "title": "port",
     "audio": "simon-port.mp3",
     "artist_id": "37",
-    "photo": "simon-port.jpg"
+    "photo": "simon-port.jpg",
+    "version": "v1"
   },
   "v1:158": {
     "title": "rain",
     "audio": "simon-rain.mp3",
     "artist_id": "37",
-    "photo": "simon-rain.jpg"
+    "photo": "simon-rain.jpg",
+    "version": "v1"
   },
   "v1:159": {
     "title": "room",
     "audio": "simon-room.mp3",
     "artist_id": "37",
-    "photo": "simon-room.jpg"
+    "photo": "simon-room.jpg",
+    "version": "v1"
   },
   "v1:160": {
     "title": "windmill",
     "audio": "simon-windmill.mp3",
     "artist_id": "37",
-    "photo": "simon-windmill.jpg"
+    "photo": "simon-windmill.jpg",
+    "version": "v1"
   },
   "v1:163": {
     "title": "forward",
     "audio": "achim-drum-forward_wPR1Sqn.mp3",
     "artist_id": "28",
-    "photo": "achim-drum-forward_d4C3wcP.jpg"
+    "photo": "achim-drum-forward_d4C3wcP.jpg",
+    "version": "v1"
   },
   "v1:164": {
     "title": "godly",
     "audio": "achim-drum-godly.mp3",
     "artist_id": "28",
-    "photo": "achim-drum-godly_E6EATcg.jpg"
+    "photo": "achim-drum-godly_E6EATcg.jpg",
+    "version": "v1"
   },
   "v1:165": {
     "title": "himmel",
     "audio": "achim-drum-himmel.mp3",
     "artist_id": "28",
-    "photo": "achim-drum-himmel_y1D5GYm.jpg"
+    "photo": "achim-drum-himmel_y1D5GYm.jpg",
+    "version": "v1"
   },
   "v1:166": {
     "title": "instead",
     "audio": "achim-drum-instead.mp3",
     "artist_id": "28",
-    "photo": "achim-drum-instead_5xrw0xY.jpg"
+    "photo": "achim-drum-instead_5xrw0xY.jpg",
+    "version": "v1"
   },
   "v1:167": {
     "title": "muddy",
     "audio": "achim-drum-muddy.mp3",
     "artist_id": "28",
-    "photo": "achim-drum-muddy_sHI3xbL.jpg"
+    "photo": "achim-drum-muddy_sHI3xbL.jpg",
+    "version": "v1"
   },
   "v1:168": {
     "title": "pfui",
     "audio": "achim-drum-pfui.mp3",
     "artist_id": "28",
-    "photo": "achim-drum-pfui_CLHCpIB.jpg"
+    "photo": "achim-drum-pfui_CLHCpIB.jpg",
+    "version": "v1"
   },
   "v1:169": {
     "title": "placed",
     "audio": "achim-drum-placed.mp3",
     "artist_id": "28",
-    "photo": "achim-drum-placed_E22Bl2b.jpg"
+    "photo": "achim-drum-placed_E22Bl2b.jpg",
+    "version": "v1"
   },
   "v1:170": {
     "title": "schnipp",
     "audio": "achim-drum-schnipp-low.mp3",
     "artist_id": "28",
-    "photo": "achim-drum-schnipp_8I2ERVG.jpg"
+    "photo": "achim-drum-schnipp_8I2ERVG.jpg",
+    "version": "v1"
   },
   "v1:171": {
     "title": "road",
     "audio": "achim-elec-road-low.mp3",
     "artist_id": "14",
-    "photo": "achim-elec-road_Hv1os1m.jpg"
+    "photo": "achim-elec-road_Hv1os1m.jpg",
+    "version": "v1"
   },
   "v1:172": {
     "title": "oh",
     "audio": "jaap-oh2_PBa1bzz.mp3",
     "artist_id": "29",
-    "photo": "jaap-oh_1fqjBoB.jpg"
+    "photo": "jaap-oh_1fqjBoB.jpg",
+    "version": "v1"
   },
   "v1:186": {
     "title": "done",
     "audio": "carolin-done.mp3",
     "artist_id": "41",
-    "photo": "done.jpg"
+    "photo": "done.jpg",
+    "version": "v1"
   },
   "v1:187": {
     "title": "flicker",
     "audio": "carolin-flicker.mp3",
     "artist_id": "41",
-    "photo": "flicker.JPG"
+    "photo": "flicker.JPG",
+    "version": "v1"
   },
   "v1:188": {
     "title": "flow",
     "audio": "carolin-flow.mp3",
     "artist_id": "41",
-    "photo": "flow.jpg"
+    "photo": "flow.jpg",
+    "version": "v1"
   },
   "v1:189": {
     "title": "friends",
     "audio": "carolin-friends.mp3",
     "artist_id": "41",
-    "photo": "friends.JPG"
+    "photo": "friends.JPG",
+    "version": "v1"
   },
   "v1:190": {
     "title": "green",
     "audio": "carolin-green.mp3",
     "artist_id": "41",
-    "photo": "green.JPG"
+    "photo": "green.JPG",
+    "version": "v1"
   },
   "v1:191": {
     "title": "horror",
     "audio": "carolin-horror.mp3",
     "artist_id": "41",
-    "photo": "horror.JPG"
+    "photo": "horror.JPG",
+    "version": "v1"
   },
   "v1:192": {
     "title": "love",
     "audio": "carolin-love.mp3",
     "artist_id": "41",
-    "photo": "love.JPG"
+    "photo": "love.JPG",
+    "version": "v1"
   },
   "v1:193": {
     "title": "melody",
     "audio": "carolin-melody.mp3",
     "artist_id": "41",
-    "photo": "melody.JPG"
+    "photo": "melody.JPG",
+    "version": "v1"
   },
   "v1:194": {
     "title": "moers",
     "audio": "carolin-moers.mp3",
     "artist_id": "41",
-    "photo": "moers.JPG"
+    "photo": "moers.JPG",
+    "version": "v1"
   },
   "v1:195": {
     "title": "slower",
     "audio": "carolin-slower.mp3",
     "artist_id": "41",
-    "photo": "slower.jpg"
+    "photo": "slower.jpg",
+    "version": "v1"
   },
   "v1:196": {
     "title": "bats",
     "audio": "bats_bssMOFI.mp3",
     "artist_id": "38",
-    "photo": "litho-bat_xmfKvk1.jpg"
+    "photo": "litho-bat_xmfKvk1.jpg",
+    "version": "v1"
   },
   "v1:197": {
     "title": "chicken",
     "audio": "chicken_YCvMzVl.mp3",
     "artist_id": "38",
-    "photo": "litho-chicken_wXPr941.jpg"
+    "photo": "litho-chicken_wXPr941.jpg",
+    "version": "v1"
   },
   "v1:198": {
     "title": "cow",
     "audio": "cow_7fG9vVh.mp3",
     "artist_id": "38",
-    "photo": "litho-cow_7rSquIb.jpg"
+    "photo": "litho-cow_7rSquIb.jpg",
+    "version": "v1"
   },
   "v1:199": {
     "title": "cranes",
     "audio": "cranes_posdkdW.mp3",
     "artist_id": "38",
-    "photo": "litho-cranes_sH3Jp85.jpg"
+    "photo": "litho-cranes_sH3Jp85.jpg",
+    "version": "v1"
   },
   "v1:200": {
     "title": "fly",
     "audio": "fly_yJAje1l.mp3",
     "artist_id": "38",
-    "photo": "litho-fly_vhpFpny.jpg"
+    "photo": "litho-fly_vhpFpny.jpg",
+    "version": "v1"
   },
   "v1:201": {
     "title": "gibbon",
     "audio": "gibbon_Yn6HfZi.mp3",
     "artist_id": "38",
-    "photo": "litho-gibbon_ipqH37t.jpg"
+    "photo": "litho-gibbon_ipqH37t.jpg",
+    "version": "v1"
   },
   "v1:202": {
     "title": "horse",
     "audio": "horse_KWzGVd3.mp3",
     "artist_id": "38",
-    "photo": "litho-horse_SxjIXhH.jpg"
+    "photo": "litho-horse_SxjIXhH.jpg",
+    "version": "v1"
   },
   "v1:203": {
     "title": "pigs",
     "audio": "pigs_uLju322.mp3",
     "artist_id": "38",
-    "photo": "litho-pig_m4YkCeG.jpg"
+    "photo": "litho-pig_m4YkCeG.jpg",
+    "version": "v1"
   },
   "v1:204": {
     "title": "sheep",
     "audio": "sheep_PoDvQEr.mp3",
     "artist_id": "38",
-    "photo": "litho-sheep_O6jr0Qv.jpg"
+    "photo": "litho-sheep_O6jr0Qv.jpg",
+    "version": "v1"
   },
   "v1:205": {
     "title": "wolves",
     "audio": "wolves.mp3",
     "artist_id": "38",
-    "photo": "litho-wolf_b6PBYX8.jpg"
+    "photo": "litho-wolf_b6PBYX8.jpg",
+    "version": "v1"
   },
   "v1:206": {
     "title": "augen",
     "audio": "achim_words-augen_6BysrWr.mp3",
     "artist_id": "39",
-    "photo": "achim-words-augen_0ipZ1zq.jpg"
+    "photo": "achim-words-augen_0ipZ1zq.jpg",
+    "version": "v1"
   },
   "v1:207": {
     "title": "beauty",
     "audio": "achim_words-beauty_RNFOPIr.mp3",
     "artist_id": "39",
-    "photo": "achim-words-beauty_59q4Rks.jpg"
+    "photo": "achim-words-beauty_59q4Rks.jpg",
+    "version": "v1"
   },
   "v1:208": {
     "title": "chance",
     "audio": "achim_words-chance_p8mNCUK.mp3",
     "artist_id": "39",
-    "photo": "achim-words-chance_7wbRiaa.jpg"
+    "photo": "achim-words-chance_7wbRiaa.jpg",
+    "version": "v1"
   },
   "v1:209": {
     "title": "coin",
     "audio": "coin_maria_UgclUd5.mp3",
     "artist_id": "39",
-    "photo": "achim-words-coin_j5lhQAj.jpg"
+    "photo": "achim-words-coin_j5lhQAj.jpg",
+    "version": "v1"
   },
   "v1:210": {
     "title": "coin",
     "audio": "coin_sindy.mp3",
     "artist_id": "39",
-    "photo": "achim-words-coin_JWmKUyC.jpg"
+    "photo": "achim-words-coin_JWmKUyC.jpg",
+    "version": "v1"
   },
   "v1:211": {
     "title": "definition",
     "audio": "definition-ai-combi.mp3",
     "artist_id": "39",
-    "photo": "achim-words-definition.jpg"
+    "photo": "achim-words-definition.jpg",
+    "version": "v1"
   },
   "v1:212": {
     "title": "puzzle",
     "audio": "puzzle-ai.mp3",
     "artist_id": "39",
-    "photo": "achim-words-puzzle.jpg"
+    "photo": "achim-words-puzzle.jpg",
+    "version": "v1"
   },
   "v1:213": {
     "title": "ruimten",
     "audio": "achim_words-ruimten.mp3",
     "artist_id": "39",
-    "photo": "achim-words-ruimten.jpg"
+    "photo": "achim-words-ruimten.jpg",
+    "version": "v1"
   },
   "v1:214": {
     "title": "vivir",
     "audio": "achim_words-vivir.mp3",
     "artist_id": "39",
-    "photo": "achim-words-vivir.jpg"
+    "photo": "achim-words-vivir.jpg",
+    "version": "v1"
   },
   "v1:215": {
     "title": "vogel",
     "audio": "achim_words-vogel.mp3",
     "artist_id": "39",
-    "photo": "achim-words-vogel.jpg"
+    "photo": "achim-words-vogel.jpg",
+    "version": "v1"
   },
   "v1:216": {
     "title": "what",
     "audio": "achim_words-what.mp3",
     "artist_id": "39",
-    "photo": "achim-words-what.jpg"
+    "photo": "achim-words-what.jpg",
+    "version": "v1"
   },
   "v1:217": {
     "title": "camion",
     "audio": "bart-camion.mp3",
     "artist_id": "40",
-    "photo": "camiontekst.jpg"
+    "photo": "camiontekst.jpg",
+    "version": "v1"
   },
   "v1:218": {
     "title": "lach",
     "audio": "bart-lach.mp3",
     "artist_id": "40",
-    "photo": "lachtekst.jpg"
+    "photo": "lachtekst.jpg",
+    "version": "v1"
   },
   "v1:219": {
     "title": "loper",
     "audio": "bart-loper.mp3",
     "artist_id": "40",
-    "photo": "lopertekst.jpg"
+    "photo": "lopertekst.jpg",
+    "version": "v1"
   },
   "v1:220": {
     "title": "luidspreker",
     "audio": "bart-luidspreker.mp3",
     "artist_id": "40",
-    "photo": "luidsprekertekst.jpg"
+    "photo": "luidsprekertekst.jpg",
+    "version": "v1"
   },
   "v1:221": {
     "title": "oma",
     "audio": "bart-oma.mp3",
     "artist_id": "40",
-    "photo": "omatekst.jpg"
+    "photo": "omatekst.jpg",
+    "version": "v1"
   },
   "v1:222": {
     "title": "the-end",
     "audio": "bart-the_end.mp3",
     "artist_id": "40",
-    "photo": "de_vlagtekst-knip.jpg"
+    "photo": "de_vlagtekst-knip.jpg",
+    "version": "v1"
   },
   "v1:223": {
     "title": "veeg",
     "audio": "bart-veeg.mp3",
     "artist_id": "40",
-    "photo": "veegtekst.jpg"
+    "photo": "veegtekst.jpg",
+    "version": "v1"
   },
   "v1:224": {
     "title": "veston",
     "audio": "bart-veston.mp3",
     "artist_id": "40",
-    "photo": "vestontekst.jpg"
+    "photo": "vestontekst.jpg",
+    "version": "v1"
   },
   "v1:225": {
     "title": "vlag",
     "audio": "bart-vlag.mp3",
     "artist_id": "40",
-    "photo": "de_vlagtekst-knip_waxnEXW.jpg"
+    "photo": "de_vlagtekst-knip_waxnEXW.jpg",
+    "version": "v1"
   },
   "v1:226": {
     "title": "wind",
     "audio": "bart-wind.mp3",
     "artist_id": "40",
-    "photo": "windtekst.jpg"
+    "photo": "windtekst.jpg",
+    "version": "v1"
   },
   "v1:227": {
     "title": "aldeburgh",
     "audio": "emilie-aldeburgh.mp3",
     "artist_id": "42",
-    "photo": "8-Aldeburgh.jpg"
+    "photo": "8-Aldeburgh.jpg",
+    "version": "v1"
   },
   "v1:228": {
     "title": "buenos-aires",
     "audio": "emilie-buenos-aires.mp3",
     "artist_id": "42",
-    "photo": "11-Buenos_Aires.jpg"
+    "photo": "11-Buenos_Aires.jpg",
+    "version": "v1"
   },
   "v1:229": {
     "title": "chevreuil",
     "audio": "emilie-chevreuil.mp3",
     "artist_id": "42",
-    "photo": "2-Chevreuil.JPG"
+    "photo": "2-Chevreuil.JPG",
+    "version": "v1"
   },
   "v1:230": {
     "title": "dinosaure",
     "audio": "emilie-dinosaure.mp3",
     "artist_id": "42",
-    "photo": "10-Dinosaure.jpg"
+    "photo": "10-Dinosaure.jpg",
+    "version": "v1"
   },
   "v1:231": {
     "title": "dom",
     "audio": "emilie-dom.mp3",
     "artist_id": "42",
-    "photo": "12-Dom.jpg"
+    "photo": "12-Dom.jpg",
+    "version": "v1"
   },
   "v1:232": {
     "title": "frederik",
     "audio": "emilie-frederik.mp3",
     "artist_id": "42",
-    "photo": "4-Fredrik.jpg"
+    "photo": "4-Fredrik.jpg",
+    "version": "v1"
   },
   "v1:233": {
     "title": "jacque-lacan",
     "audio": "emilie-jacque-lacan.mp3",
     "artist_id": "42",
-    "photo": "7-Jacques_Lacan.jpg"
+    "photo": "7-Jacques_Lacan.jpg",
+    "version": "v1"
   },
   "v1:234": {
     "title": "laval",
     "audio": "emilie-laval.mp3",
     "artist_id": "42",
-    "photo": "1-Laval.JPG"
+    "photo": "1-Laval.JPG",
+    "version": "v1"
   },
   "v1:235": {
     "title": "moelle",
     "audio": "emilie-moelle.mp3",
     "artist_id": "42",
-    "photo": "9-Moelle.jpg"
+    "photo": "9-Moelle.jpg",
+    "version": "v1"
   },
   "v1:236": {
     "title": "mont-royal",
     "audio": "emilie-mont-royal.mp3",
     "artist_id": "42",
-    "photo": "5-Mont-Royal.jpg"
+    "photo": "5-Mont-Royal.jpg",
+    "version": "v1"
   },
   "v1:237": {
     "title": "neige",
     "audio": "emilie-neige.mp3",
     "artist_id": "42",
-    "photo": "6-Neige.jpg"
+    "photo": "6-Neige.jpg",
+    "version": "v1"
   },
   "v1:238": {
     "title": "rhinoceros",
     "audio": "emilie-rhinoceros.mp3",
     "artist_id": "42",
-    "photo": "3-Rhinocéros.jpg"
+    "photo": "3-Rhinocéros.jpg",
+    "version": "v1"
   },
   "v1:239": {
     "title": "circuit",
     "audio": "florian-circuit.mp3",
     "artist_id": "43",
-    "photo": "florian-circuit.jpg"
+    "photo": "florian-circuit.jpg",
+    "version": "v1"
   },
   "v1:240": {
     "title": "distance",
     "audio": "florian-distance.mp3",
     "artist_id": "43",
-    "photo": "florian-distance.jpg"
+    "photo": "florian-distance.jpg",
+    "version": "v1"
   },
   "v1:241": {
     "title": "fluid",
     "audio": "florian-fluid.mp3",
     "artist_id": "43",
-    "photo": "florian-fluid.jpg"
+    "photo": "florian-fluid.jpg",
+    "version": "v1"
   },
   "v1:242": {
     "title": "lollop",
     "audio": "florian-lollop.mp3",
     "artist_id": "43",
-    "photo": "florian-lollop.jpg"
+    "photo": "florian-lollop.jpg",
+    "version": "v1"
   },
   "v1:243": {
     "title": "lui",
     "audio": "florian-lui.mp3",
     "artist_id": "43",
-    "photo": "florian-lui.jpg"
+    "photo": "florian-lui.jpg",
+    "version": "v1"
   },
   "v1:244": {
     "title": "reprise",
     "audio": "florian-reprise.mp3",
     "artist_id": "43",
-    "photo": "florian-reprise.jpg"
+    "photo": "florian-reprise.jpg",
+    "version": "v1"
   },
   "v1:245": {
     "title": "shizo",
     "audio": "florian-shizo.mp3",
     "artist_id": "43",
-    "photo": "florian-shizo.jpg"
+    "photo": "florian-shizo.jpg",
+    "version": "v1"
   },
   "v1:246": {
     "title": "tasty",
     "audio": "florian-tasty.mp3",
     "artist_id": "43",
-    "photo": "florian-tasty.jpg"
+    "photo": "florian-tasty.jpg",
+    "version": "v1"
   },
   "v1:247": {
     "title": "universe",
     "audio": "florian-universe.mp3",
     "artist_id": "43",
-    "photo": "florian-universe.jpg"
+    "photo": "florian-universe.jpg",
+    "version": "v1"
   },
   "v1:248": {
     "title": "wild",
     "audio": "florian-wild.mp3",
     "artist_id": "43",
-    "photo": "florian-wild.jpg"
+    "photo": "florian-wild.jpg",
+    "version": "v1"
   }
 }

@@ -3,6 +3,7 @@ export interface Track {
   artist_id: string;
   audio: string;
   photo: string;
+  version?: string;
 }
 
 export interface Artist {
