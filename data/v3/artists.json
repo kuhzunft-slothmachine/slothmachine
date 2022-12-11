@@ -1,0 +1,23 @@
+{
+  "14": { "name": "achim zepezauer", "instrument": "electronics" },
+  "22": { "name": "gailė griciūtė", "instrument": "prepared piano" },
+  "24": { "name": "pablo paredes", "instrument": "keyboards" },
+  "26": { "name": "michael vatcher", "instrument": "drums" },
+  "27": { "name": "achim zepezauer", "instrument": "acoustics" },
+  "28": { "name": "achim zepezauer", "instrument": "drumcomputer" },
+  "29": { "name": "jaap blonk", "instrument": "voice" },
+  "30": { "name": "john chantler", "instrument": "modular synth" },
+  "31": { "name": "jérôme noetinger", "instrument": "tape machine" },
+  "32": { "name": "marta zapparoli", "instrument": "radio waves" },
+  "33": { "name": "rhodri davies", "instrument": "harp" },
+  "34": { "name": "richard lerman", "instrument": "piezo + hydrophone" },
+  "35": { "name": "seán mac erlaine", "instrument": "woodwinds" },
+  "36": { "name": "serge corteyn", "instrument": "guitar" },
+  "37": { "name": "simon whetham", "instrument": "field recordings" },
+  "38": { "name": "animals" },
+  "39": { "name": "achim zepezauer", "instrument": "words" },
+  "40": { "name": "bart maris", "instrument": "trumpet" },
+  "41": { "name": "carolin pook", "instrument": "violin" },
+  "42": { "name": "émilie girard-charest", "instrument": "cello" },
+  "43": { "name": "florian hartlieb", "instrument": "computer" }
+}
