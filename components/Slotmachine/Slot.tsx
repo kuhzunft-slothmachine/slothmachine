@@ -37,7 +37,7 @@ const Slot = ({ slotIdx, className }: SlotProps) => {
             className={classes.image}
             key={track.photo}
             style={{
-              backgroundImage: `url(/media/${currentVersion}/cover/${track.photo})`
+              backgroundImage: `url(/media/${track.version ?? currentVersion}/cover/${track.photo})`
             }}
             aria-label={`Picture of the ${track.title}`}
           />

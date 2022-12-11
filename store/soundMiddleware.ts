@@ -59,7 +59,7 @@ const createSoundMiddleware = (howls: Howl[]) => {
           const track = state.tracks[slot.trackIdx];
 
           const howl = new Howl({
-            src: [`/media/${currentVersion}/audio/${track.audio}`],
+            src: [`/media/${track.version ?? currentVersion}/audio/${track.audio}`],
             loop: false,
             onload: () => {
               console.log(`Howl ${slotIdx} loaded`);
